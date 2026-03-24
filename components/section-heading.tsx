@@ -27,10 +27,12 @@ export function SectionHeading({
       <span className={`chip ${isCentered ? "mx-auto w-fit" : ""}`.trim()}>
         {eyebrow}
       </span>
-      <h2 className="mt-5 text-4xl font-semibold leading-[1.04] text-white sm:text-5xl">
+      <h2 className="mt-4 text-[2rem] font-semibold leading-[1.06] text-white sm:mt-5 sm:text-[2.65rem] sm:leading-[1.04] lg:text-5xl">
         {title}
       </h2>
-      <p className="mt-4 text-lg leading-8 text-muted">{description}</p>
+      <p className="mt-3 text-[0.98rem] leading-7 text-muted sm:mt-4 sm:text-lg sm:leading-8">
+        {description}
+      </p>
     </div>
   );
 }

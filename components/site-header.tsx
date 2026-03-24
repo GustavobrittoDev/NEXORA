@@ -21,18 +21,38 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 sm:pt-4 lg:px-8">
         <div
           className={[
-            "rounded-full border transition-all duration-300",
+            "rounded-[1.9rem] border transition-all duration-300 lg:rounded-full",
             isScrolled
               ? "border-white/12 bg-[#07101d]/82 shadow-[0_24px_70px_-34px_rgba(3,7,18,0.95)] backdrop-blur-2xl"
               : "border-white/10 bg-[#07101d]/58 backdrop-blur-xl",
           ].join(" ")}
         >
-          <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-5 lg:hidden">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5 lg:hidden">
             <a
               href="#inicio"
               aria-label="Voltar ao início"
@@ -44,7 +64,7 @@ export function SiteHeader() {
 
             <button
               type="button"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70"
               onClick={() => setIsOpen((current) => !current)}
               aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={isOpen}
@@ -81,35 +101,43 @@ export function SiteHeader() {
             </div>
           </div>
 
-          {isOpen ? (
-            <div
-              id="mobile-navigation"
-              className="border-t border-white/8 px-4 pb-4 pt-2 sm:px-5 lg:hidden"
-            >
-              <nav className="flex flex-col gap-2" aria-label="Menu mobile">
-                {navigation.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="rounded-2xl px-3 py-3 text-sm font-medium text-slate-100/82 transition hover:bg-white/[0.06] hover:text-white"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
+          <div
+            id="mobile-navigation"
+            aria-hidden={!isOpen}
+            className={[
+              "grid overflow-hidden transition-all duration-300 lg:hidden",
+              isOpen
+                ? "grid-rows-[1fr] border-t border-white/8 opacity-100"
+                : "pointer-events-none grid-rows-[0fr] opacity-0",
+            ].join(" ")}
+          >
+            <div className="min-h-0">
+              <div className="px-4 pb-4 pt-2 sm:px-5">
+                <nav className="flex flex-col gap-2" aria-label="Menu mobile">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-[1.1rem] px-3.5 py-3.5 text-[0.95rem] font-medium text-slate-100/82 transition hover:bg-white/[0.06] hover:text-white"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
 
-              <div className="mt-4">
-                <ButtonLink
-                  href="#contato"
-                  size="sm"
-                  className="w-full justify-center"
-                >
-                  Iniciar projeto
-                </ButtonLink>
+                <div className="mt-4">
+                  <ButtonLink
+                    href="#contato"
+                    size="sm"
+                    className="h-12 w-full justify-center"
+                  >
+                    Iniciar projeto
+                  </ButtonLink>
+                </div>
               </div>
             </div>
-          ) : null}
+          </div>
         </div>
       </div>
     </header>

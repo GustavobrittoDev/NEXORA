@@ -20,8 +20,8 @@ const variantClasses = {
 } as const;
 
 const sizeClasses = {
-  sm: "h-11 px-5 text-sm",
-  md: "h-[3.125rem] px-6 text-sm sm:text-[0.95rem]",
+  sm: "h-11 px-4 text-sm sm:px-5",
+  md: "min-h-[3.125rem] px-5 text-sm sm:px-6 sm:text-[0.95rem]",
 } as const;
 
 export function ButtonLink({
@@ -41,7 +41,7 @@ export function ButtonLink({
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
       className={[
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#040713]",
+        "inline-flex items-center justify-center gap-2 rounded-full text-center font-semibold transition duration-300 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#040713]",
         variantClasses[variant],
         sizeClasses[size],
         variant === "ghost" ? "" : "hover:-translate-y-0.5",
