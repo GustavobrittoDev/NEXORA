@@ -276,11 +276,11 @@ export default function Home() {
               align="center"
             />
 
-            <div className="mt-10 grid gap-3.5 sm:mt-12 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="project-scrollbar -mx-4 mt-10 flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:mt-12 sm:gap-4 sm:px-0 sm:pb-0 md:grid md:overflow-visible lg:grid-cols-4">
               {projects.map((project, index) => (
                 <article
                   key={project.name}
-                  className="panel group lift-hover overflow-hidden rounded-[1.7rem] p-3 fade-up sm:rounded-[2rem] sm:p-4"
+                  className="panel group lift-hover w-[85vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[1.7rem] p-3 fade-up sm:w-[22rem] sm:rounded-[2rem] sm:p-4 md:w-auto md:max-w-none md:shrink md:snap-none"
                   style={{ animationDelay: `${index * 75}ms` }}
                 >
                   <div className="relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.96),rgba(7,13,29,0.92))] p-2 sm:rounded-[1.5rem] sm:p-2.5">

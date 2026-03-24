@@ -244,6 +244,29 @@ select {
   .fade-delay-3 {
     animation-delay: 0.24s;
   }
+
+  .project-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(97, 166, 255, 0.55) rgba(255, 255, 255, 0.06);
+  }
+
+  .project-scrollbar::-webkit-scrollbar {
+    height: 0.45rem;
+  }
+
+  .project-scrollbar::-webkit-scrollbar-track {
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .project-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: linear-gradient(
+      90deg,
+      rgba(59, 130, 246, 0.88),
+      rgba(124, 58, 237, 0.82)
+    );
+  }
 }
 
 @keyframes float {
