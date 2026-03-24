@@ -121,11 +121,7 @@ export function SiteHeader() {
               : "border-white/10 bg-[#07101d]/58 backdrop-blur-xl",
           ].join(" ")}
         >
-          <div className="items-center px-6 py-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-slate-200/56">
-              Tecnologia que impulsiona negócios.
-            </p>
-
+          <div className="items-center px-6 py-3 lg:grid lg:grid-cols-[1fr_auto] lg:gap-8">
             <nav
               className="flex items-center justify-center gap-7"
               aria-label="Navegação principal"
