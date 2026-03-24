@@ -42,44 +42,38 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 sm:pt-4 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-2 sm:px-6 sm:pt-4 lg:px-8">
         <div className="lg:hidden">
-          <div
+          <button
+            type="button"
             className={[
-              "inline-flex rounded-full border p-1.5 transition-all duration-300",
-              isScrolled
-                ? "border-white/12 bg-[#07101d]/84 shadow-[0_24px_70px_-34px_rgba(3,7,18,0.95)] backdrop-blur-2xl"
-                : "border-white/10 bg-[#07101d]/62 backdrop-blur-xl",
+              "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70",
+              isScrolled ? "bg-[#07101d]/70 backdrop-blur-xl" : "bg-transparent",
             ].join(" ")}
+            onClick={() => setIsOpen((current) => !current)}
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
-            <button
-              type="button"
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70"
-              onClick={() => setIsOpen((current) => !current)}
-              aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-              aria-expanded={isOpen}
-              aria-controls="mobile-navigation"
-            >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
 
           <div
             id="mobile-navigation"
             aria-hidden={!isOpen}
             className={[
-              "origin-top-left pt-3 transition-all duration-300 ease-out",
+              "origin-top-left pt-2 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
               isOpen
-                ? "pointer-events-auto translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-2 opacity-0",
+                ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
+                : "pointer-events-none -translate-y-2 scale-[0.97] opacity-0",
             ].join(" ")}
           >
             <div
               className={[
-                "w-[calc(100vw-2rem)] max-w-[22rem] overflow-hidden rounded-[1.75rem] border bg-[#07101d]/92 shadow-[0_28px_80px_-38px_rgba(3,7,18,0.95)] backdrop-blur-2xl transition-all duration-300 ease-out sm:w-[22rem]",
+                "w-[calc(100vw-2rem)] max-w-[21rem] overflow-hidden rounded-[1.5rem] bg-[#07101d]/90 shadow-[0_28px_80px_-38px_rgba(3,7,18,0.95)] backdrop-blur-2xl transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:w-[21rem]",
                 isOpen
-                  ? "border-white/12 blur-0"
-                  : "border-white/0 blur-[6px]",
+                  ? "border border-white/10 blur-0"
+                  : "border border-white/0 blur-[6px]",
               ].join(" ")}
             >
               <div className="px-4 py-4 sm:px-5">

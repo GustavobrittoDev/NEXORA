@@ -21,8 +21,8 @@ const sizes = {
   },
   lg: {
     wrapper: "gap-3",
-    word: "text-[2.75rem] min-[390px]:text-[3.1rem] sm:text-[3.7rem] lg:text-[4.5rem]",
-    tagline: "text-[0.62rem] tracking-[0.34em] sm:text-[0.82rem] sm:tracking-[0.42em]",
+    word: "text-[2.45rem] min-[360px]:text-[2.75rem] min-[390px]:text-[3.1rem] sm:text-[3.7rem] lg:text-[4.5rem]",
+    tagline: "text-[0.58rem] tracking-[0.3em] sm:text-[0.82rem] sm:tracking-[0.42em]",
     x: "h-[0.86em] w-[0.78em]",
     tracking: "tracking-[0.22em]",
   },
