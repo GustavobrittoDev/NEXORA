@@ -18,22 +18,23 @@ export const metadata: Metadata = {
     template: "%s | Nexora",
   },
   description:
-    "Agência digital premium especializada em sites profissionais, landing pages, sistemas web e soluções digitais sob medida para empresas que buscam presença, performance e crescimento.",
+    "Agência digital premium especializada em sites institucionais, landing pages, sistemas web e soluções digitais sob medida para marcas que buscam clareza, autoridade e performance.",
   keywords: [
-    "agência digital",
-    "sites profissionais",
+    "agência digital premium",
+    "sites institucionais",
     "landing pages",
     "sistemas web",
-    "soluções digitais",
-    "desenvolvimento sob medida",
+    "soluções digitais sob medida",
+    "desenvolvimento web premium",
     "Nexora",
   ],
   category: "technology",
   authors: [{ name: "Nexora" }],
+  applicationName: "Nexora",
   openGraph: {
     title: "Nexora | Tecnologia que impulsiona negócios.",
     description:
-      "Sites profissionais, landing pages, sistemas web e soluções digitais exclusivas para negócios que querem crescer com alto padrão.",
+      "Arquitetura digital sob medida para marcas que precisam crescer com autoridade, clareza e alto padrão.",
     locale: "pt_BR",
     type: "website",
     siteName: "Nexora",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nexora | Tecnologia que impulsiona negócios.",
     description:
-      "Soluções digitais sob medida para marcas que exigem presença, performance e sofisticação.",
+      "Sites, sistemas e estruturas digitais sob medida para negócios que não podem parecer genéricos.",
   },
   robots: {
     index: true,

@@ -12,16 +12,16 @@ type ButtonLinkProps = {
 
 const variantClasses = {
   primary:
-    "bg-gradient-to-r from-brand to-accent text-white shadow-[0_18px_40px_-18px_rgba(59,130,246,0.95)] hover:shadow-[0_28px_58px_-24px_rgba(124,58,237,0.85)]",
+    "border border-white/10 bg-[linear-gradient(135deg,rgba(59,130,246,0.96),rgba(124,58,237,0.92))] text-white shadow-[0_18px_40px_-20px_rgba(59,130,246,0.75)] hover:shadow-[0_24px_55px_-24px_rgba(124,58,237,0.72)]",
   secondary:
-    "border border-white/14 bg-white/6 text-white hover:border-white/22 hover:bg-white/10",
+    "border border-white/12 bg-white/[0.04] text-white hover:border-white/24 hover:bg-white/[0.08]",
   ghost:
-    "border border-transparent bg-transparent px-0 text-slate-100/84 hover:text-white",
+    "border border-transparent bg-transparent px-0 text-slate-100/80 hover:text-white",
 } as const;
 
 const sizeClasses = {
   sm: "h-11 px-5 text-sm",
-  md: "h-13 px-6 text-sm sm:text-[0.95rem]",
+  md: "h-[3.125rem] px-6 text-sm sm:text-[0.95rem]",
 } as const;
 
 export function ButtonLink({
@@ -41,9 +41,10 @@ export function ButtonLink({
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
       className={[
-        "inline-flex items-center gap-2 rounded-full font-semibold transition duration-300 hover:-translate-y-0.5",
+        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#040713]",
         variantClasses[variant],
         sizeClasses[size],
+        variant === "ghost" ? "" : "hover:-translate-y-0.5",
         className,
       ]
         .filter(Boolean)

@@ -1,10 +1,13 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Blocks,
+  Code2,
   Gauge,
   LayoutTemplate,
   MonitorSmartphone,
   Palette,
+  Rocket,
+  ScanSearch,
   ShieldCheck,
   Sparkles,
   Waypoints,
@@ -22,17 +25,27 @@ type ItemWithIcon = {
   description: string;
 };
 
+type ProcessStep = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  note: string;
+};
+
 type Project = {
   name: string;
   category: string;
+  kindLabel: string;
   kicker: string;
   description: string;
+  outcome: string;
   preview: string[];
   imageSrc: string;
   imageAlt: string;
   imageBadge: string;
   imageFit?: "cover" | "contain";
   href?: string;
+  buttonLabel?: string;
 };
 
 export const contact = {
@@ -60,81 +73,107 @@ export const navigation: NavigationItem[] = [
   { label: "Contato", href: "#contato" },
 ];
 
+export const heroHighlights = [
+  "Sites institucionais",
+  "Landing pages",
+  "Sistemas web",
+  "Estruturas sob medida",
+];
+
 export const solutions: ItemWithIcon[] = [
   {
     icon: MonitorSmartphone,
     title: "Sites institucionais",
     description:
-      "Presenças digitais premium para empresas que precisam comunicar valor, autoridade e consistência profissional.",
+      "Estruturas institucionais com leitura premium para marcas que precisam transmitir autoridade, clareza e consistência.",
   },
   {
     icon: LayoutTemplate,
     title: "Landing pages",
     description:
-      "Páginas de alta conversão com copy estratégica, ritmo visual sofisticado e foco absoluto em performance.",
+      "Páginas desenhadas para campanhas, ofertas e captação com narrativa precisa, ritmo visual refinado e foco em conversão.",
   },
   {
     icon: Workflow,
     title: "Sistemas web",
     description:
-      "Plataformas desenvolvidas para organizar processos, centralizar informações e apoiar a operação com inteligência.",
+      "Interfaces para operação, gestão e produtividade, organizadas para tornar processos mais claros, eficientes e escaláveis.",
   },
   {
     icon: Blocks,
     title: "Soluções personalizadas",
     description:
-      "Fluxos, áreas restritas, integrações e funcionalidades criadas conforme o contexto real do negócio.",
+      "Funcionalidades, fluxos, áreas restritas e integrações construídos a partir da realidade do negócio, não de estruturas prontas.",
   },
   {
     icon: Sparkles,
     title: "Interfaces modernas",
     description:
-      "Experiências digitais elegantes, intuitivas e alinhadas à expectativa de marcas que buscam alto padrão.",
+      "Experiências digitais com acabamento sofisticado, boa hierarquia de informação e sensação de produto maduro desde a primeira interação.",
   },
   {
     icon: Gauge,
-    title: "Estruturas digitais para negócios",
+    title: "Estruturas para crescimento",
     description:
-      "Ecossistemas pensados para autoridade, usabilidade, velocidade e evolução contínua da presença online.",
+      "Projetos pensados para posicionamento, performance e evolução contínua da presença digital e da operação.",
+  },
+];
+
+export const processSteps: ProcessStep[] = [
+  {
+    icon: ScanSearch,
+    title: "Diagnóstico e direção",
+    description:
+      "Entendimento do contexto da marca, do momento do negócio e do papel estratégico que a estrutura digital precisa cumprir.",
+    note: "Base conceitual e comercial antes do layout.",
+  },
+  {
+    icon: Palette,
+    title: "Arquitetura e interface",
+    description:
+      "Definição de narrativa, hierarquia visual e experiência para que a percepção de valor seja clara e coerente.",
+    note: "Design orientado por posicionamento e leitura.",
+  },
+  {
+    icon: Code2,
+    title: "Desenvolvimento e refinamento",
+    description:
+      "Construção técnica com cuidado de acabamento, consistência visual e estrutura pronta para operar com fluidez.",
+    note: "Execução limpa, responsiva e sob medida.",
+  },
+  {
+    icon: Rocket,
+    title: "Entrega pronta para crescer",
+    description:
+      "Publicação com base sólida para evolução, facilitando novos ajustes, campanhas, integrações ou expansão operacional.",
+    note: "Clareza hoje, escalabilidade depois.",
   },
 ];
 
 export const differentials: ItemWithIcon[] = [
   {
     icon: Sparkles,
-    title: "Cada projeto é único",
+    title: "Cada entrega parte do negócio",
     description:
-      "A solução nasce da identidade da marca, da maturidade do negócio e do resultado que o projeto precisa gerar.",
+      "A direção visual e funcional nasce da identidade da marca, do objetivo comercial e do nível de maturidade da operação.",
   },
   {
     icon: Blocks,
-    title: "Desenvolvimento sob medida",
+    title: "Nada é encaixado em modelo pronto",
     description:
-      "Nada é encaixado à força em estruturas prontas. A construção respeita escopo, contexto e prioridades reais.",
-  },
-  {
-    icon: Palette,
-    title: "Design estratégico e profissional",
-    description:
-      "A estética trabalha a favor do posicionamento, da credibilidade e da experiência, sem ruído visual desnecessário.",
+      "A estrutura é desenhada para o projeto, sem reaproveitar soluções genéricas que diluem posicionamento e percepção de valor.",
   },
   {
     icon: Waypoints,
-    title: "Soluções alinhadas ao objetivo do cliente",
+    title: "Decisões guiadas por clareza",
     description:
-      "Cada decisão de estrutura, funcionalidade e narrativa é pensada para responder a uma meta concreta do projeto.",
-  },
-  {
-    icon: Gauge,
-    title: "Autoridade, usabilidade e performance",
-    description:
-      "A base técnica e visual é planejada para transmitir confiança, facilitar navegação e sustentar boa velocidade.",
+      "Narrativa, usabilidade e arquitetura caminham juntas para conduzir leitura, reforçar autoridade e facilitar o próximo passo.",
   },
   {
     icon: ShieldCheck,
-    title: "Alto padrão visual e técnico",
+    title: "Acabamento visual e técnico de alto padrão",
     description:
-      "O acabamento combina linguagem premium, execução limpa e coerência de ponta a ponta na experiência digital.",
+      "A experiência é refinada em tipografia, ritmo, comportamento e implementação para que a entrega pareça madura em cada detalhe.",
   },
 ];
 
@@ -142,27 +181,35 @@ export const projects: Project[] = [
   {
     name: "Landing page para delivery",
     category: "Landing page",
-    kicker: "Cardápio e geração de contato",
+    kindLabel: "Projeto real",
+    kicker: "Cardápio, posicionamento e contato rápido",
     description:
-      "Estrutura criada para valorizar produtos, reforçar presença digital e transformar interesse em contato com mais rapidez.",
+      "Estrutura criada para valorizar produtos, organizar a apresentação da marca e facilitar o contato direto com o cliente.",
+    outcome:
+      "Mostra como uma landing page pode unir apelo comercial, leitura clara e operação simples sem parecer genérica.",
     href: "https://marmitasdanida.vercel.app/",
+    buttonLabel: "Abrir projeto",
     preview: [
       "Cardápio em destaque",
       "Contato simplificado",
-      "Experiência mobile",
+      "Leitura mobile",
     ],
     imageSrc: "/project-previews/marmitas-da-nida.png",
     imageAlt:
       "Preview de uma landing page para delivery com cardápio, destaques e blocos institucionais.",
-    imageBadge: "Preview real",
+    imageBadge: "Projeto real",
   },
   {
     name: "Site institucional para serviços",
     category: "Site institucional",
-    kicker: "Credibilidade e captação",
+    kindLabel: "Projeto real",
+    kicker: "Credibilidade, clareza e geração de contato",
     description:
-      "Modelo pensado para apresentar serviços com clareza, fortalecer a percepção de valor da marca e apoiar a entrada de novos contatos.",
+      "Modelo pensado para apresentar serviços com mais peso visual, reforçar percepção de valor e apoiar a captação de novos contatos.",
+    outcome:
+      "Demonstra como uma estrutura institucional pode elevar confiança, leitura e autoridade comercial.",
     href: "https://fortlar.vercel.app/",
+    buttonLabel: "Abrir projeto",
     preview: [
       "Apresentação de serviços",
       "Posicionamento sólido",
@@ -171,15 +218,19 @@ export const projects: Project[] = [
     imageSrc: "/project-previews/fortlar.png",
     imageAlt:
       "Preview de um site institucional para serviços com hero comercial, formulário de orçamento e blocos de apresentação.",
-    imageBadge: "Preview real",
+    imageBadge: "Projeto real",
   },
   {
     name: "Vitrine digital para loja premium",
     category: "Catálogo / Ecommerce",
-    kicker: "Produto em destaque e atendimento rápido",
+    kindLabel: "Projeto real",
+    kicker: "Produto, prova social e atendimento direto",
     description:
-      "Projeto voltado para valorizar produtos, acelerar o atendimento comercial e criar uma experiência mais forte para marcas de varejo premium.",
+      "Projeto voltado para valorizar catálogo, acelerar atendimento comercial e construir uma experiência mais forte para marcas de varejo premium.",
+    outcome:
+      "Reforça como design, curadoria visual e fluxo de contato podem trabalhar juntos para aumentar percepção de valor.",
     href: "https://ciaphone.vercel.app/",
+    buttonLabel: "Abrir projeto",
     preview: [
       "Vitrine de produtos",
       "Prova social",
@@ -188,14 +239,17 @@ export const projects: Project[] = [
     imageSrc: "/project-previews/ciaphone.png",
     imageAlt:
       "Preview de uma vitrine digital para loja premium com hero de produtos, seções comerciais e destaque para conversão.",
-    imageBadge: "Preview real",
+    imageBadge: "Projeto real",
   },
   {
     name: "Sistema CRM sob medida",
     category: "Sistema web",
-    kicker: "Gestão operacional",
+    kindLabel: "Exemplo visual",
+    kicker: "Gestão operacional com leitura clara",
     description:
-      "Interface desenvolvida para organizar processos, centralizar informações e dar mais clareza à rotina operacional do negócio.",
+      "Interface conceitual para demonstrar como a Nexora organiza processos, centraliza dados e traduz complexidade em operação legível.",
+    outcome:
+      "Separa o que é exemplo de sistema da vitrine de sites e mostra amplitude de execução além da presença institucional.",
     preview: [
       "Processos centralizados",
       "Visão operacional",
@@ -207,4 +261,10 @@ export const projects: Project[] = [
     imageBadge: "Exemplo visual",
     imageFit: "contain",
   },
+];
+
+export const aboutHighlights = [
+  "Projetos sob medida, sem soluções genéricas.",
+  "Design estratégico com leitura premium e alto valor percebido.",
+  "Estrutura técnica pensada para performance, usabilidade e evolução.",
 ];
