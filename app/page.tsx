@@ -2,7 +2,6 @@ import Image from "next/image";
 import {
   ArrowRight,
   ArrowUpRight,
-  CheckCircle2,
   Mail,
   MessageCircleMore,
   ShieldCheck,
@@ -20,7 +19,6 @@ import {
   mailtoUrl,
   projects,
   solutions,
-  stats,
   whatsappUrl,
 } from "@/data/site-content";
 
@@ -55,28 +53,25 @@ export default function Home() {
                 </h1>
 
                 <p className="max-w-2xl text-lg leading-8 text-muted sm:text-xl">
-                  A Nexora desenvolve sites profissionais, landing pages,
-                  sistemas web e soluções digitais personalizadas para empresas
-                  que não aceitam estruturas genéricas. Cada entrega nasce da
-                  identidade, dos objetivos e do estágio de crescimento do
-                  cliente.
+                  Criamos sites, landing pages, sistemas web e soluções sob
+                  medida para empresas que precisam comunicar valor e crescer
+                  com estrutura profissional.
                 </p>
               </div>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="mt-8 flex flex-wrap gap-3">
                 {[
-                  "Sites profissionais que comunicam valor e credibilidade.",
-                  "Sistemas web construídos para organizar, vender e escalar.",
-                  "Interfaces modernas com experiência refinada e intuitiva.",
-                  "Projetos exclusivos, sem replicar modelos prontos.",
+                  "Sites premium",
+                  "Sistemas web",
+                  "Soluções sob medida",
+                  "Sem modelos prontos",
                 ].map((item) => (
-                  <div
+                  <span
                     key={item}
-                    className="panel flex items-start gap-3 rounded-2xl px-4 py-4"
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-100/82"
                   >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-strong" />
-                    <p className="text-sm leading-6 text-slate-100/88">{item}</p>
-                  </div>
+                    {item}
+                  </span>
                 ))}
               </div>
 
@@ -95,22 +90,6 @@ export default function Home() {
                 >
                   Solicitar orçamento
                 </ButtonLink>
-              </div>
-
-              <div className="mt-12 grid gap-4 sm:grid-cols-3">
-                {stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="panel lift-hover rounded-[1.75rem] px-5 py-5"
-                  >
-                    <p className="text-3xl font-semibold text-white">
-                      {stat.value}
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-muted">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
