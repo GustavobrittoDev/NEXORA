@@ -237,55 +237,57 @@ export default function Home() {
               align="center"
             />
 
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {projects.map((project) => (
                 <article
                   key={project.name}
-                  className="panel group lift-hover overflow-hidden rounded-[2.2rem] p-5"
+                  className="panel group lift-hover overflow-hidden rounded-[2rem] p-4"
                 >
-                  <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.98),rgba(7,13,29,0.92))] p-3">
+                  <div className="relative overflow-hidden rounded-[1.55rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.98),rgba(7,13,29,0.92))] p-2.5">
                     <div className="absolute inset-0 grid-mesh opacity-20" />
 
-                    <div className="relative flex items-center justify-between px-1 pb-3">
-                      <span className="chip">{project.category}</span>
+                    <div className="relative flex items-center justify-between px-1 pb-2.5">
+                      <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-slate-100/80">
+                        {project.category}
+                      </span>
                       {project.href ? (
                         <ArrowUpRight className="h-5 w-5 text-white/70 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       ) : (
-                        <span className="rounded-full border border-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-200/70">
+                        <span className="rounded-full border border-white/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-slate-200/70">
                           Solução interna
                         </span>
                       )}
                     </div>
 
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem] border border-white/10 bg-[#08111f]">
+                    <div className="relative aspect-[16/11] overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#08111f]">
                       <Image
                         src={project.imageSrc}
                         alt={project.imageAlt}
                         fill
-                        sizes="(min-width: 1280px) 46vw, (min-width: 768px) 48vw, 100vw"
+                        sizes="(min-width: 1024px) 22vw, (min-width: 768px) 48vw, 100vw"
                         className={`transition duration-500 group-hover:scale-[1.02] ${
                           project.imageFit === "contain"
-                            ? "object-contain p-4"
+                            ? "object-contain p-3"
                             : "object-cover object-top"
                         }`}
                       />
-                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#07101b] via-[#07101b]/55 to-transparent" />
-                      <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/82 backdrop-blur-xl">
+                      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#07101b] via-[#07101b]/55 to-transparent" />
+                      <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/45 px-2.5 py-1 text-[0.64rem] font-semibold uppercase tracking-[0.2em] text-white/82 backdrop-blur-xl">
                         {project.imageBadge}
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-6 space-y-3">
+                  <div className="mt-4 space-y-2.5">
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-strong/82">
                         {project.kicker}
                       </p>
-                      <h3 className="mt-2 text-2xl font-semibold text-white">
+                      <h3 className="mt-2 text-[1.35rem] font-semibold leading-tight text-white">
                         {project.name}
                       </h3>
                     </div>
-                    <p className="text-base leading-7 text-muted">
+                    <p className="text-sm leading-6 text-muted">
                       {project.description}
                     </p>
 
@@ -293,7 +295,7 @@ export default function Home() {
                       {project.preview.map((item) => (
                         <span
                           key={item}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-slate-100/80"
+                          className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-[0.72rem] font-medium text-slate-100/80"
                         >
                           {item}
                         </span>
@@ -311,7 +313,7 @@ export default function Home() {
                         Ver projeto
                       </ButtonLink>
                     ) : (
-                      <p className="text-sm leading-7 text-slate-200/72">
+                      <p className="text-sm leading-6 text-slate-200/72">
                         Exemplo visual de uma interface CRM para demonstrar como
                         a Nexora organiza processos, centraliza informações e
                         transforma operação em clareza.
