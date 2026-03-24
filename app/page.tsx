@@ -61,7 +61,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-7xl items-start gap-10 px-6 lg:grid-cols-[1fr_0.98fr] lg:gap-12 lg:px-8">
+          <div className="mx-auto mt-8 grid max-w-7xl items-center gap-8 px-6 lg:grid-cols-[1.04fr_0.96fr] lg:gap-10 lg:px-8">
             <div className="relative z-10">
               <div className="lg:hidden">
                 <NexoraLogo size="lg" />
