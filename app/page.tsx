@@ -38,11 +38,7 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl items-start gap-14 px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:px-8">
             <div className="relative z-10">
-              <div className="chip w-fit">
-                Estratégia, design e desenvolvimento sob medida
-              </div>
-
-              <div className="mt-8">
+              <div>
                 <NexoraLogo size="lg" />
               </div>
 
@@ -61,10 +57,10 @@ export default function Home() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 {[
-                  "Sites premium",
-                  "Sistemas web",
-                  "Soluções sob medida",
-                  "Sem modelos prontos",
+                  "Design UI/UX",
+                  "Site corporativo",
+                  "Landing page",
+                  "Ecommerce",
                 ].map((item) => (
                   <span
                     key={item}
