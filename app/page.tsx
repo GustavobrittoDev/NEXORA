@@ -46,8 +46,7 @@ export default function Home() {
 
               <div className="mt-7 max-w-3xl space-y-5 sm:mt-10 sm:space-y-6">
                 <h1 className="max-w-[13ch] text-[2.95rem] font-semibold leading-[0.92] text-white min-[390px]:text-[3.25rem] sm:max-w-none sm:text-6xl lg:text-[5rem]">
-                  Arquitetura digital sob medida para marcas que precisam
-                  crescer com autoridade.
+                  Soluções digitais sob medida para crescer com autoridade.
                 </h1>
 
                 <p className="max-w-xl text-[1rem] leading-7 text-muted sm:max-w-2xl sm:text-xl sm:leading-8">
