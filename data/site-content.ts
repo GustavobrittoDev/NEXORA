@@ -29,6 +29,10 @@ type Project = {
   kicker: string;
   description: string;
   preview: string[];
+  imageSrc: string;
+  imageAlt: string;
+  imageBadge: string;
+  imageFit?: "cover" | "contain";
   href?: string;
 };
 
@@ -191,6 +195,10 @@ export const projects: Project[] = [
       "Projeto digital desenvolvido para apresentar cardápio, fortalecer presença online e facilitar o contato com clientes.",
     href: "https://marmitasdanida.vercel.app/",
     preview: ["Cardápio em destaque", "Contato simplificado", "Experiência mobile"],
+    imageSrc: "/project-previews/marmitas-da-nida.png",
+    imageAlt:
+      "Preview da landing page Marmitas da Nida com cardápio, destaques e blocos institucionais.",
+    imageBadge: "Preview real",
   },
   {
     name: "Fortlar",
@@ -200,6 +208,10 @@ export const projects: Project[] = [
       "Site profissional voltado para apresentação de serviços, fortalecimento da credibilidade e geração de contatos.",
     href: "https://fortlar.vercel.app/",
     preview: ["Apresentação de serviços", "Posicionamento sólido", "Captação de leads"],
+    imageSrc: "/project-previews/fortlar.png",
+    imageAlt:
+      "Preview do site Fortlar com hero institucional, formulário de orçamento e blocos de serviços.",
+    imageBadge: "Preview real",
   },
   {
     name: "CRM",
@@ -208,23 +220,10 @@ export const projects: Project[] = [
     description:
       "Sistema desenvolvido para organizar processos, centralizar informações e melhorar a gestão operacional do negócio.",
     preview: ["Processos centralizados", "Visão operacional", "Rotina mais inteligente"],
-  },
-];
-
-export const process = [
-  {
-    title: "Imersão no negócio",
-    description:
-      "Entendimento do posicionamento, das dores, do cenário atual e do que a solução precisa resolver de verdade.",
-  },
-  {
-    title: "Estrutura e identidade",
-    description:
-      "Definição da narrativa, da arquitetura da interface e dos elementos que tornam o projeto coerente com a marca.",
-  },
-  {
-    title: "Desenvolvimento com propósito",
-    description:
-      "Implementação técnica orientada por performance, usabilidade e longevidade, sem recorrer a soluções genéricas.",
+    imageSrc: "/project-previews/crm-example.svg",
+    imageAlt:
+      "Exemplo visual de dashboard CRM com métricas, pipeline comercial e tabela de clientes.",
+    imageBadge: "Exemplo visual",
+    imageFit: "contain",
   },
 ];

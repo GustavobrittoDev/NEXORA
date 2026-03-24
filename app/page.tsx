@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -14,11 +15,9 @@ import { SectionHeading } from "@/components/section-heading";
 import { SiteHeader } from "@/components/site-header";
 import { ButtonLink } from "@/components/ui/button-link";
 import {
-  aboutPillars,
   contact,
   differentials,
   mailtoUrl,
-  process,
   projects,
   solutions,
   stats,
@@ -51,8 +50,8 @@ export default function Home() {
 
               <div className="mt-8 space-y-6">
                 <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] text-white sm:text-6xl lg:text-[5.3rem]">
-                  Soluções digitais sob medida para negócios que querem crescer
-                  com presença, performance e alto padrão.
+                  Soluções digitais sob medida para crescer com autoridade e
+                  performance.
                 </h1>
 
                 <p className="max-w-2xl text-lg leading-8 text-muted sm:text-xl">
@@ -116,71 +115,6 @@ export default function Home() {
             </div>
 
             <HeroVisual />
-          </div>
-        </section>
-
-        <section className="section-anchor py-20 lg:py-28" id="sobre">
-          <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1fr_1.02fr] lg:px-8">
-            <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Sobre a Nexora"
-                title="Presença digital forte nasce da união entre visão estratégica, design preciso e tecnologia bem executada."
-                description="A Nexora foi posicionada para entregar mais do que presença online: criamos estruturas digitais com linguagem premium, performance consistente e arquitetura preparada para acompanhar a evolução real de cada negócio."
-              />
-
-              <p className="max-w-2xl text-lg leading-8 text-slate-100/86">
-                Cada projeto é pensado para fortalecer credibilidade, elevar a
-                percepção de valor da marca e construir uma base profissional
-                capaz de gerar novas oportunidades com clareza, usabilidade e
-                consistência técnica.
-              </p>
-
-              <div className="panel-strong rounded-[2rem] p-7 sm:p-8">
-                <p className="text-xl leading-8 text-white sm:text-2xl">
-                  Estruturamos experiências digitais que sustentam crescimento,
-                  melhoram a leitura da marca e acompanham a ambição do cliente
-                  com fluidez e sofisticação.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {aboutPillars.map((pillar) => {
-                const Icon = pillar.icon;
-
-                return (
-                  <article
-                    key={pillar.title}
-                    className="panel lift-hover rounded-[2rem] p-6"
-                  >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/6 text-brand-strong">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="mt-5 text-xl font-semibold text-white">
-                      {pillar.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-muted">
-                      {pillar.description}
-                    </p>
-                  </article>
-                );
-              })}
-
-              <article className="panel-strong shine-border rounded-[2rem] p-7 sm:col-span-2">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="chip">Posicionamento premium</span>
-                  <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em] text-slate-200/78">
-                    Estrutura profissional
-                  </span>
-                </div>
-                <p className="mt-7 text-xl leading-8 text-white sm:text-2xl">
-                  A entrega da Nexora combina estética de alto padrão, leitura
-                  estratégica do negócio e execução técnica limpa para que a
-                  presença digital acompanhe o ritmo da empresa, hoje e na
-                  próxima fase de crescimento.
-                </p>
-              </article>
-            </div>
           </div>
         </section>
 
@@ -308,11 +242,10 @@ export default function Home() {
                   key={project.name}
                   className="panel group lift-hover overflow-hidden rounded-[2.2rem] p-5 sm:p-6"
                 >
-                  <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.98),rgba(7,13,29,0.92))] p-5">
-                    <div className="absolute inset-0 grid-mesh opacity-25" />
-                    <div className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(97,166,255,0.16),transparent_68%)] blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.98),rgba(7,13,29,0.92))] p-3 sm:p-4">
+                    <div className="absolute inset-0 grid-mesh opacity-20" />
 
-                    <div className="relative flex items-center justify-between">
+                    <div className="relative flex items-center justify-between px-1 pb-3">
                       <span className="chip">{project.category}</span>
                       {project.href ? (
                         <ArrowUpRight className="h-5 w-5 text-white/70 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -323,25 +256,21 @@ export default function Home() {
                       )}
                     </div>
 
-                    <div className="relative mt-8 rounded-[1.45rem] border border-white/10 bg-black/25 p-4 backdrop-blur-xl">
-                      <div className="flex items-center gap-2">
-                        <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-emerald-300/80" />
-                      </div>
-
-                      <div className="mt-5 space-y-3">
-                        {project.preview.map((line) => (
-                          <div
-                            key={line}
-                            className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/4 px-4 py-3"
-                          >
-                            <span className="text-sm font-medium text-slate-100/82">
-                              {line}
-                            </span>
-                            <span className="h-2 w-16 rounded-full bg-gradient-to-r from-brand/65 to-accent/55" />
-                          </div>
-                        ))}
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem] border border-white/10 bg-[#08111f]">
+                      <Image
+                        src={project.imageSrc}
+                        alt={project.imageAlt}
+                        fill
+                        sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
+                        className={`transition duration-500 group-hover:scale-[1.02] ${
+                          project.imageFit === "contain"
+                            ? "object-contain p-4"
+                            : "object-cover object-top"
+                        }`}
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#07101b] via-[#07101b]/55 to-transparent" />
+                      <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/45 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/82 backdrop-blur-xl">
+                        {project.imageBadge}
                       </div>
                     </div>
                   </div>
@@ -358,6 +287,18 @@ export default function Home() {
                     <p className="text-base leading-7 text-muted">
                       {project.description}
                     </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.preview.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-slate-100/80"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+
                     {project.href ? (
                       <ButtonLink
                         href={project.href}
@@ -370,8 +311,9 @@ export default function Home() {
                       </ButtonLink>
                     ) : (
                       <p className="text-sm leading-7 text-slate-200/72">
-                        Projeto apresentado como solução digital desenvolvida
-                        para organização operacional e gestão inteligente.
+                        Exemplo visual de uma interface CRM para demonstrar como
+                        a Nexora organiza processos, centraliza informações e
+                        transforma operação em clareza.
                       </p>
                     )}
                   </div>
@@ -381,62 +323,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="panel-strong relative overflow-hidden rounded-[2.8rem] px-8 py-10 sm:px-10 lg:px-12 lg:py-14">
-              <div className="pointer-events-none absolute left-0 top-0 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(97,166,255,0.18),transparent_72%)] blur-2xl" />
-              <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.18),transparent_72%)] blur-2xl" />
-
-              <div className="relative grid gap-10 lg:grid-cols-[1fr_1.03fr] lg:gap-14">
-                <div>
-                  <SectionHeading
-                    eyebrow="Exclusividade"
-                    title="Projetos que nascem da realidade do cliente, não de modelos prontos."
-                    description="A Nexora não replica estruturas genéricas. Cada solução é desenhada conforme o posicionamento, a identidade visual, o fluxo de negócio e as funcionalidades que realmente fazem sentido para a operação."
-                  />
-
-                  <p className="mt-6 text-lg leading-8 text-slate-100/86">
-                    Isso significa uma entrega mais coerente, mais valiosa e
-                    muito mais alinhada ao que a marca precisa transmitir agora
-                    e sustentar nos próximos ciclos de crescimento.
-                  </p>
-                </div>
-
-                <div className="grid gap-4">
-                  {process.map((step, index) => (
-                    <div
-                      key={step.title}
-                      className="rounded-[1.9rem] border border-white/10 bg-white/5 px-5 py-5 backdrop-blur-xl"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/7 text-sm font-semibold text-white">
-                          0{index + 1}
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-white">
-                            {step.title}
-                          </h3>
-                          <p className="mt-2 text-sm leading-7 text-muted">
-                            {step.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="panel-strong rounded-[2.6rem] px-8 py-10 sm:px-10 lg:flex lg:items-end lg:justify-between lg:gap-10">
               <div className="max-w-3xl">
-                <div className="chip w-fit">
-                  Presença digital premium para negócios ambiciosos
-                </div>
-                <h2 className="mt-6 text-4xl font-semibold leading-tight text-white sm:text-5xl">
+                <h2 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
                   Seu negócio merece uma presença digital à altura da sua
                   ambição.
                 </h2>
@@ -469,6 +360,37 @@ export default function Home() {
                 >
                   Solicitar projeto
                 </ButtonLink>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-anchor py-20 lg:py-24" id="sobre">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="panel-strong rounded-[2.6rem] px-8 py-10 sm:px-10 lg:grid lg:grid-cols-[1fr_0.9fr] lg:gap-10">
+              <div>
+                <SectionHeading
+                  eyebrow="Sobre a Nexora"
+                  title="Estratégia, design e tecnologia para construir presença digital com autoridade."
+                  description="A Nexora desenvolve sites, sistemas e estruturas digitais sob medida para marcas que precisam comunicar valor e crescer com consistência."
+                />
+              </div>
+
+              <div className="mt-8 grid gap-4 lg:mt-0">
+                {[
+                  "Projetos sob medida, sem soluções genéricas.",
+                  "Design profissional com leitura clara e premium.",
+                  "Estrutura pensada para performance, usabilidade e evolução.",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-[1.8rem] border border-white/10 bg-white/5 px-5 py-5"
+                  >
+                    <p className="text-sm leading-7 text-slate-100/84">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

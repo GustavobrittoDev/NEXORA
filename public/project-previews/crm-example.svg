@@ -1,0 +1,115 @@
+<svg width="1440" height="1080" viewBox="0 0 1440 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="1080" rx="48" fill="#071120"/>
+  <rect width="1440" height="1080" rx="48" fill="url(#bgGlow)"/>
+  <g opacity="0.55">
+    <path d="M1216 1028C1216 871.145 1343.15 744 1500 744V1080H1216V1028Z" fill="url(#purpleGlow)"/>
+    <path d="M0 176C0 78.7989 78.7989 0 176 0H430C430 237.482 237.482 430 0 430V176Z" fill="url(#blueGlow)"/>
+  </g>
+  <rect x="36" y="36" width="1368" height="1008" rx="34" fill="#0B162C" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="68" y="68" width="240" height="944" rx="28" fill="#0A1325"/>
+  <rect x="100" y="104" width="176" height="58" rx="20" fill="#111F3A"/>
+  <text x="124" y="142" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">CRM Nexora</text>
+  <circle cx="123" cy="216" r="6" fill="#4D8DFF"/>
+  <text x="144" y="224" fill="#E8EEFF" font-family="Arial, sans-serif" font-size="20">Visão geral</text>
+  <circle cx="123" cy="280" r="6" fill="#8E7BFF"/>
+  <text x="144" y="288" fill="#8B9BC0" font-family="Arial, sans-serif" font-size="20">Leads</text>
+  <circle cx="123" cy="344" r="6" fill="#8E7BFF"/>
+  <text x="144" y="352" fill="#8B9BC0" font-family="Arial, sans-serif" font-size="20">Clientes</text>
+  <circle cx="123" cy="408" r="6" fill="#8E7BFF"/>
+  <text x="144" y="416" fill="#8B9BC0" font-family="Arial, sans-serif" font-size="20">Tarefas</text>
+  <circle cx="123" cy="472" r="6" fill="#8E7BFF"/>
+  <text x="144" y="480" fill="#8B9BC0" font-family="Arial, sans-serif" font-size="20">Relatórios</text>
+  <rect x="100" y="872" width="176" height="108" rx="22" fill="#101D36"/>
+  <text x="124" y="916" fill="#7D8FB7" font-family="Arial, sans-serif" font-size="16">Status da equipe</text>
+  <text x="124" y="952" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="32" font-weight="700">12 ativos</text>
+  <text x="124" y="976" fill="#73D5A1" font-family="Arial, sans-serif" font-size="16">+18% na semana</text>
+  <rect x="340" y="68" width="1032" height="120" rx="28" fill="#0C172E"/>
+  <text x="384" y="122" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="40" font-weight="700">Pipeline, tarefas e operação em um só painel.</text>
+  <text x="384" y="156" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="20">Exemplo de interface para organizar contatos, acompanhar processos e tomar decisões com clareza.</text>
+  <rect x="340" y="220" width="244" height="144" rx="26" fill="#101D36"/>
+  <text x="372" y="266" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="18">Novos leads</text>
+  <text x="372" y="326" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="52" font-weight="700">148</text>
+  <rect x="372" y="338" width="96" height="26" rx="13" fill="#173760"/>
+  <text x="392" y="356" fill="#7CC8FF" font-family="Arial, sans-serif" font-size="14">+12% no mês</text>
+  <rect x="604" y="220" width="244" height="144" rx="26" fill="#101D36"/>
+  <text x="636" y="266" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="18">Negócios ativos</text>
+  <text x="636" y="326" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="52" font-weight="700">37</text>
+  <rect x="636" y="338" width="104" height="26" rx="13" fill="#241C4D"/>
+  <text x="656" y="356" fill="#B39DFF" font-family="Arial, sans-serif" font-size="14">Ticket elevado</text>
+  <rect x="868" y="220" width="244" height="144" rx="26" fill="#101D36"/>
+  <text x="900" y="266" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="18">Conversão</text>
+  <text x="900" y="326" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="52" font-weight="700">28%</text>
+  <rect x="900" y="338" width="88" height="26" rx="13" fill="#163D32"/>
+  <text x="920" y="356" fill="#7BE6B4" font-family="Arial, sans-serif" font-size="14">Meta acima</text>
+  <rect x="1124" y="220" width="248" height="144" rx="26" fill="url(#cardHighlight)"/>
+  <text x="1156" y="266" fill="#D8E8FF" font-family="Arial, sans-serif" font-size="18">Receita prevista</text>
+  <text x="1156" y="326" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="48" font-weight="700">R$ 94 mil</text>
+  <text x="1156" y="356" fill="#C6D4FF" font-family="Arial, sans-serif" font-size="14">Baseada no pipeline atual</text>
+  <rect x="340" y="396" width="640" height="308" rx="30" fill="#0E1B34"/>
+  <text x="376" y="444" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Pipeline comercial</text>
+  <text x="376" y="476" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="16">Distribuição de oportunidades por etapa</text>
+  <rect x="378" y="530" width="120" height="122" rx="24" fill="#13274C"/>
+  <text x="408" y="578" fill="#BFD4FF" font-family="Arial, sans-serif" font-size="18">Entrada</text>
+  <text x="418" y="622" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" font-weight="700">42</text>
+  <rect x="526" y="494" width="120" height="158" rx="24" fill="#1A3564"/>
+  <text x="548" y="542" fill="#BFD4FF" font-family="Arial, sans-serif" font-size="18">Contato</text>
+  <text x="566" y="592" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" font-weight="700">31</text>
+  <rect x="674" y="450" width="120" height="202" rx="24" fill="#274A8A"/>
+  <text x="697" y="498" fill="#D7E5FF" font-family="Arial, sans-serif" font-size="18">Proposta</text>
+  <text x="714" y="548" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" font-weight="700">19</text>
+  <rect x="822" y="560" width="120" height="92" rx="24" fill="#4C32A6"/>
+  <text x="845" y="608" fill="#E2D8FF" font-family="Arial, sans-serif" font-size="18">Fechados</text>
+  <text x="868" y="638" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="32" font-weight="700">8</text>
+  <rect x="1012" y="396" width="360" height="308" rx="30" fill="#0E1B34"/>
+  <text x="1048" y="444" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Atividades recentes</text>
+  <rect x="1048" y="492" width="288" height="56" rx="18" fill="#13243F"/>
+  <circle cx="1080" cy="520" r="9" fill="#4D8DFF"/>
+  <text x="1104" y="515" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="18">Reunião agendada com cliente premium</text>
+  <text x="1104" y="538" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="14">Hoje, 14:30</text>
+  <rect x="1048" y="564" width="288" height="56" rx="18" fill="#13243F"/>
+  <circle cx="1080" cy="592" r="9" fill="#7BE6B4"/>
+  <text x="1104" y="587" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="18">Lead movido para proposta comercial</text>
+  <text x="1104" y="610" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="14">Há 45 min</text>
+  <rect x="1048" y="636" width="288" height="56" rx="18" fill="#13243F"/>
+  <circle cx="1080" cy="664" r="9" fill="#B39DFF"/>
+  <text x="1104" y="659" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="18">Checklist de onboarding concluído</text>
+  <text x="1104" y="682" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="14">Ontem, 18:12</text>
+  <rect x="340" y="736" width="1032" height="276" rx="30" fill="#0E1B34"/>
+  <text x="376" y="784" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Clientes em acompanhamento</text>
+  <rect x="376" y="826" width="960" height="54" rx="18" fill="#12213B"/>
+  <text x="408" y="860" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="16">Empresa</text>
+  <text x="690" y="860" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="16">Responsável</text>
+  <text x="930" y="860" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="16">Etapa</text>
+  <text x="1160" y="860" fill="#8EA0C8" font-family="Arial, sans-serif" font-size="16">Próxima ação</text>
+  <rect x="376" y="896" width="960" height="40" rx="14" fill="#0F1C34"/>
+  <text x="408" y="922" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="18">Atlas Engenharia</text>
+  <text x="690" y="922" fill="#D9E3FF" font-family="Arial, sans-serif" font-size="18">Larissa Souza</text>
+  <rect x="930" y="904" width="108" height="24" rx="12" fill="#173760"/>
+  <text x="957" y="920" fill="#7CC8FF" font-family="Arial, sans-serif" font-size="14">Proposta</text>
+  <text x="1160" y="922" fill="#D9E3FF" font-family="Arial, sans-serif" font-size="18">Ajustar escopo</text>
+  <rect x="376" y="948" width="960" height="40" rx="14" fill="#0F1C34"/>
+  <text x="408" y="974" fill="#F4F7FF" font-family="Arial, sans-serif" font-size="18">Lumen Clínicas</text>
+  <text x="690" y="974" fill="#D9E3FF" font-family="Arial, sans-serif" font-size="18">Marco Pereira</text>
+  <rect x="930" y="956" width="128" height="24" rx="12" fill="#163D32"/>
+  <text x="952" y="972" fill="#7BE6B4" font-family="Arial, sans-serif" font-size="14">Fechamento</text>
+  <text x="1160" y="974" fill="#D9E3FF" font-family="Arial, sans-serif" font-size="18">Enviar contrato</text>
+  <defs>
+    <linearGradient id="bgGlow" x1="153" y1="72" x2="1246" y2="1014" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B162C"/>
+      <stop offset="0.55" stop-color="#09121F"/>
+      <stop offset="1" stop-color="#0D1427"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0) rotate(43.6348) scale(650.49 514.881)">
+      <stop stop-color="#2B7FFF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2B7FFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1500 1080) rotate(-135) scale(690.843 574.054)">
+      <stop stop-color="#7C3AED" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardHighlight" x1="1124" y1="220" x2="1372" y2="364" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+</svg>
