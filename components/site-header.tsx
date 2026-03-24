@@ -10,8 +10,8 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 lg:hidden">
+      <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6">
         <div className="panel rounded-full px-4 py-3 sm:px-5">
           <div className="flex items-center justify-between gap-4">
             <a

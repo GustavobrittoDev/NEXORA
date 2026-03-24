@@ -17,6 +17,7 @@ import {
   contact,
   differentials,
   mailtoUrl,
+  navigation,
   projects,
   solutions,
   whatsappUrl,
@@ -34,11 +35,35 @@ export default function Home() {
       <main className="relative">
         <section
           id="inicio"
-          className="section-anchor pt-32 pb-22 sm:pt-36 lg:pt-40 lg:pb-28"
+          className="section-anchor pt-32 pb-22 sm:pt-36 lg:pt-24 lg:pb-28"
         >
-          <div className="mx-auto grid max-w-7xl items-start gap-14 px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:px-8">
+          <div className="mx-auto hidden max-w-7xl items-center justify-between gap-8 px-6 lg:flex lg:px-8">
+            <a href="#inicio" aria-label="Voltar ao início" className="shrink-0">
+              <NexoraLogo size="md" />
+            </a>
+
+            <div className="flex items-center gap-8">
+              <nav className="flex items-center gap-7">
+                {navigation.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-slate-100/78 transition hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+
+              <ButtonLink href="#contato" size="sm">
+                Solicitar projeto
+              </ButtonLink>
+            </div>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-7xl items-start gap-14 px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:px-8">
             <div className="relative z-10">
-              <div>
+              <div className="lg:hidden">
                 <NexoraLogo size="lg" />
               </div>
 

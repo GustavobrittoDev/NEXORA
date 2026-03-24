@@ -43,9 +43,10 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(75, 118, 255, 0.18), transparent 34%),
-    radial-gradient(circle at top right, rgba(125, 71, 255, 0.2), transparent 28%),
-    linear-gradient(180deg, #050816 0%, #071022 44%, #050713 100%);
+    radial-gradient(circle at 14% 12%, rgba(86, 127, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 10%, rgba(128, 84, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 58% 72%, rgba(41, 95, 214, 0.12), transparent 34%),
+    linear-gradient(180deg, #040713 0%, #060b18 34%, #07101d 68%, #050814 100%);
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
   overflow-x: hidden;
@@ -54,29 +55,31 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  inset: -12%;
   pointer-events: none;
-  background-image:
-    linear-gradient(to right, rgba(137, 157, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(137, 157, 255, 0.06) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(circle at center, black 28%, transparent 76%);
-  -webkit-mask-image: radial-gradient(circle at center, black 28%, transparent 76%);
-  opacity: 0.45;
+  background:
+    radial-gradient(circle at 20% 28%, rgba(77, 134, 255, 0.2), transparent 20%),
+    radial-gradient(circle at 78% 24%, rgba(132, 89, 255, 0.18), transparent 18%),
+    radial-gradient(circle at 55% 82%, rgba(42, 102, 255, 0.14), transparent 24%);
+  filter: blur(90px);
+  opacity: 0.9;
   z-index: -2;
+  animation: aurora-drift 22s ease-in-out infinite alternate;
 }
 
 body::after {
   content: "";
   position: fixed;
-  inset: auto -10% -20% auto;
-  width: 38rem;
-  height: 38rem;
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.16) 0%, transparent 68%);
-  filter: blur(20px);
+  inset: 0;
   pointer-events: none;
   z-index: -1;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 76% 34%, rgba(171, 193, 255, 0.1) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 48% 68%, rgba(255, 255, 255, 0.08) 0 1px, transparent 1.8px);
+  background-size: 280px 280px, 340px 340px, 300px 300px;
+  opacity: 0.35;
+  animation: star-drift 36s linear infinite;
 }
 
 a {
@@ -237,6 +240,33 @@ a {
   50% {
     opacity: 1;
     transform: scale(1.08);
+  }
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 2%, 0) scale(1.02);
+  }
+}
+
+@keyframes star-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.24;
+  }
+  50% {
+    transform: translate3d(-1.5%, 1%, 0);
+    opacity: 0.38;
+  }
+  100% {
+    transform: translate3d(1.5%, -1%, 0);
+    opacity: 0.24;
   }
 }
 
