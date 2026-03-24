@@ -456,7 +456,7 @@ export default function Home() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="panel lift-hover rounded-[1.9rem] px-6 py-6"
+                  className="panel lift-hover block rounded-[1.9rem] px-6 py-6"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
@@ -479,7 +479,7 @@ export default function Home() {
 
                 <a
                   href={mailtoUrl}
-                  className="panel lift-hover rounded-[1.9rem] px-6 py-6"
+                  className="panel lift-hover block rounded-[1.9rem] px-6 py-6"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
