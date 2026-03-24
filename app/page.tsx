@@ -28,22 +28,22 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[42rem] bg-[radial-gradient(circle_at_top,rgba(98,148,255,0.18),transparent_54%)]" />
-      <div className="pointer-events-none absolute right-[-18rem] top-[24rem] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.18),transparent_72%)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[radial-gradient(circle_at_top,rgba(98,148,255,0.18),transparent_56%)]" />
+      <div className="pointer-events-none absolute right-[-16rem] top-[22rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.16),transparent_72%)] blur-3xl" />
       <SiteHeader />
 
       <main className="relative">
         <section
           id="inicio"
-          className="section-anchor pt-32 pb-22 sm:pt-36 lg:pt-24 lg:pb-28"
+          className="section-anchor pt-28 pb-20 sm:pt-32 lg:pt-20 lg:pb-24"
         >
-          <div className="mx-auto hidden max-w-7xl items-center justify-between gap-8 px-6 lg:flex lg:px-8">
+          <div className="mx-auto hidden max-w-7xl items-center justify-between gap-6 px-6 lg:flex lg:px-8">
             <a href="#inicio" aria-label="Voltar ao início" className="shrink-0">
               <NexoraLogo size="md" />
             </a>
 
-            <div className="flex items-center gap-8">
-              <nav className="flex items-center gap-7">
+            <div className="flex items-center gap-7">
+              <nav className="flex items-center gap-6">
                 {navigation.map((item) => (
                   <a
                     key={item.href}
@@ -61,14 +61,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-7xl items-start gap-14 px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:px-8">
+          <div className="mx-auto mt-8 grid max-w-7xl items-start gap-10 px-6 lg:grid-cols-[1fr_0.98fr] lg:gap-12 lg:px-8">
             <div className="relative z-10">
               <div className="lg:hidden">
                 <NexoraLogo size="lg" />
               </div>
 
-              <div className="mt-8 space-y-6">
-                <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white sm:text-6xl lg:text-[4.9rem]">
+              <div className="mt-8 space-y-5">
+                <h1 className="max-w-3xl text-5xl font-semibold leading-[0.96] text-white sm:text-6xl lg:text-[4.7rem]">
                   Soluções digitais sob medida para crescer com autoridade e
                   performance.
                 </h1>
@@ -80,7 +80,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-7 flex flex-wrap gap-3">
                 {[
                   "Design UI/UX",
                   "Site corporativo",
@@ -96,7 +96,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink
                   href={whatsappUrl}
                   icon={<MessageCircleMore className="h-4 w-4" />}
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-anchor py-20 lg:py-28" id="solucoes">
+        <section className="section-anchor py-16 lg:py-20" id="solucoes">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <SectionHeading
               eyebrow="Soluções"
@@ -127,22 +127,22 @@ export default function Home() {
               align="center"
             />
 
-            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {solutions.map((solution) => {
                 const Icon = solution.icon;
 
                 return (
                   <article
                     key={solution.title}
-                    className="panel lift-hover rounded-[2rem] p-7"
+                    className="panel lift-hover rounded-[2rem] p-6"
                   >
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/6 text-brand-strong">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="mt-6 text-2xl font-semibold text-white">
+                    <h3 className="mt-5 text-2xl font-semibold text-white">
                       {solution.title}
                     </h3>
-                    <p className="mt-4 text-base leading-7 text-muted">
+                    <p className="mt-3 text-base leading-7 text-muted">
                       {solution.description}
                     </p>
                   </article>
@@ -152,17 +152,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-anchor py-20 lg:py-28" id="diferenciais">
+        <section className="section-anchor py-16 lg:py-20" id="diferenciais">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <SectionHeading
               eyebrow="Diferenciais"
               title="Autoridade visual, desenvolvimento sob medida e estrutura pensada para objetivos reais."
               description="A Nexora atua com um nível de personalização que respeita a identidade da empresa, o contexto de mercado e o que precisa acontecer depois do lançamento."
+              align="center"
             />
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
-              <div className="panel-strong shine-border rounded-[2.4rem] p-8 sm:p-10">
-                <div className="flex items-center gap-3">
+            <div className="mt-10 grid gap-5 lg:grid-cols-[1.02fr_0.98fr]">
+              <div className="panel-strong shine-border rounded-[2.4rem] p-7 text-center sm:p-8">
+                <div className="flex items-center justify-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/8 text-brand-strong">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
@@ -171,13 +172,13 @@ export default function Home() {
                   </span>
                 </div>
 
-                <p className="mt-8 text-2xl leading-9 text-white sm:text-[2rem] sm:leading-[1.35]">
+                <p className="mt-6 text-2xl leading-9 text-white sm:text-[2rem] sm:leading-[1.35]">
                   Na Nexora, cada site e sistema é desenvolvido de forma única,
                   de acordo com a identidade, as necessidades e os objetivos de
                   cada cliente.
                 </p>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="mt-7 grid gap-3 sm:grid-cols-2">
                   {[
                     "Arquitetura pensada para autoridade, usabilidade e performance.",
                     "Design estratégico que valoriza a marca sem excessos visuais.",
@@ -186,7 +187,7 @@ export default function Home() {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="rounded-[1.6rem] border border-white/10 bg-white/5 px-4 py-4"
+                      className="rounded-[1.6rem] border border-white/10 bg-white/5 px-4 py-4 text-left"
                     >
                       <p className="text-sm leading-7 text-slate-100/86">
                         {item}
@@ -196,14 +197,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid gap-4">
+              <div className="grid gap-3">
                 {differentials.map((item) => {
                   const Icon = item.icon;
 
                   return (
                     <article
                       key={item.title}
-                      className="panel lift-hover rounded-[1.9rem] px-6 py-6"
+                      className="panel lift-hover rounded-[1.9rem] px-5 py-5"
                     >
                       <div className="flex items-start gap-4">
                         <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/6 text-brand-strong">
@@ -227,22 +228,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-anchor py-20 lg:py-28" id="projetos">
+        <section className="section-anchor py-16 lg:py-20" id="projetos">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <SectionHeading
               eyebrow="Projetos"
-              title="Portfólio com foco em presença digital, credibilidade e estrutura inteligente."
+              title="Modelos com foco em presença digital, credibilidade e estrutura inteligente."
               description="Cada entrega traduz uma necessidade diferente de negócio, mantendo o mesmo padrão de clareza visual, experiência refinada e coerência estratégica."
               align="center"
             />
 
-            <div className="mt-12 grid gap-6 xl:grid-cols-3">
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
               {projects.map((project) => (
                 <article
                   key={project.name}
-                  className="panel group lift-hover overflow-hidden rounded-[2.2rem] p-5 sm:p-6"
+                  className="panel group lift-hover overflow-hidden rounded-[2.2rem] p-5"
                 >
-                  <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.98),rgba(7,13,29,0.92))] p-3 sm:p-4">
+                  <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.98),rgba(7,13,29,0.92))] p-3">
                     <div className="absolute inset-0 grid-mesh opacity-20" />
 
                     <div className="relative flex items-center justify-between px-1 pb-3">
@@ -261,7 +262,7 @@ export default function Home() {
                         src={project.imageSrc}
                         alt={project.imageAlt}
                         fill
-                        sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
+                        sizes="(min-width: 1280px) 46vw, (min-width: 768px) 48vw, 100vw"
                         className={`transition duration-500 group-hover:scale-[1.02] ${
                           project.imageFit === "contain"
                             ? "object-contain p-4"
@@ -275,12 +276,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="mt-7 space-y-4">
+                  <div className="mt-6 space-y-3">
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.25em] text-brand-strong/82">
                         {project.kicker}
                       </p>
-                      <h3 className="mt-3 text-2xl font-semibold text-white">
+                      <h3 className="mt-2 text-2xl font-semibold text-white">
                         {project.name}
                       </h3>
                     </div>
@@ -323,22 +324,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 lg:py-24">
+        <section className="py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="panel-strong rounded-[2.6rem] px-8 py-10 sm:px-10 lg:flex lg:items-end lg:justify-between lg:gap-10">
-              <div className="max-w-3xl">
+            <div className="panel-strong rounded-[2.6rem] px-7 py-8 text-center sm:px-9 lg:px-10">
+              <div className="mx-auto max-w-3xl">
                 <h2 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
                   Seu negócio merece uma presença digital à altura da sua
                   ambição.
                 </h2>
-                <p className="mt-5 text-lg leading-8 text-muted">
+                <p className="mt-4 text-lg leading-8 text-muted">
                   Se a sua marca precisa comunicar mais valor, vender com mais
                   clareza e operar com uma estrutura digital superior, a Nexora
                   está pronta para desenhar esse próximo nível com você.
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-wrap lg:justify-end">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <ButtonLink
                   href={whatsappUrl}
                   icon={<MessageCircleMore className="h-4 w-4" />}
@@ -365,18 +366,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-anchor py-20 lg:py-24" id="sobre">
+        <section className="section-anchor py-16 lg:py-20" id="sobre">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="panel-strong rounded-[2.6rem] px-8 py-10 sm:px-10 lg:grid lg:grid-cols-[1fr_0.9fr] lg:gap-10">
-              <div>
-                <SectionHeading
-                  eyebrow="Sobre a Nexora"
-                  title="Estratégia, design e tecnologia para construir presença digital com autoridade."
-                  description="A Nexora desenvolve sites, sistemas e estruturas digitais sob medida para marcas que precisam comunicar valor e crescer com consistência."
-                />
-              </div>
+            <div className="panel-strong rounded-[2.6rem] px-7 py-8 sm:px-9 lg:px-10">
+              <SectionHeading
+                eyebrow="Sobre a Nexora"
+                title="Estratégia, design e tecnologia para construir presença digital com autoridade."
+                description="A Nexora desenvolve sites, sistemas e estruturas digitais sob medida para marcas que precisam comunicar valor e crescer com consistência."
+                align="center"
+              />
 
-              <div className="mt-8 grid gap-4 lg:mt-0">
+              <div className="mx-auto mt-8 grid max-w-5xl gap-3 md:grid-cols-3">
                 {[
                   "Projetos sob medida, sem soluções genéricas.",
                   "Design profissional com leitura clara e premium.",
@@ -384,7 +384,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="rounded-[1.8rem] border border-white/10 bg-white/5 px-5 py-5"
+                    className="rounded-[1.8rem] border border-white/10 bg-white/5 px-5 py-5 text-center"
                   >
                     <p className="text-sm leading-7 text-slate-100/84">
                       {item}
@@ -396,21 +396,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contato" className="section-anchor pt-20 pb-10 lg:pt-28">
-          <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[0.94fr_1.06fr] lg:px-8">
-            <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Contato"
-                title="Vamos construir a próxima fase digital da sua empresa."
-                description="Converse com a Nexora para estruturar um site premium, uma landing page de alta conversão, um sistema web ou uma solução personalizada para a sua operação."
-              />
+        <section id="contato" className="section-anchor pt-16 pb-10 lg:pt-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="Contato"
+              title="Vamos construir a próxima fase digital da sua empresa."
+              description="Converse com a Nexora para estruturar um site premium, uma landing page de alta conversão, um sistema web ou uma solução personalizada para a sua operação."
+              align="center"
+            />
 
-              <div className="grid gap-4">
+            <div className="mt-10 grid gap-6 lg:grid-cols-[0.94fr_1.06fr]">
+              <div className="space-y-4">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="panel lift-hover rounded-[1.8rem] px-6 py-6"
+                  className="panel lift-hover rounded-[1.8rem] px-5 py-5"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/7 text-brand-strong">
@@ -433,7 +434,7 @@ export default function Home() {
 
                 <a
                   href={mailtoUrl}
-                  className="panel lift-hover rounded-[1.8rem] px-6 py-6"
+                  className="panel lift-hover rounded-[1.8rem] px-5 py-5"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/7 text-brand-strong">
@@ -454,7 +455,7 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div className="panel-strong rounded-[1.8rem] p-6">
+                <div className="panel-strong rounded-[1.8rem] p-5">
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/8 text-brand-strong">
                       <Sparkles className="h-5 w-5" />
@@ -465,20 +466,21 @@ export default function Home() {
                         refinada.
                       </p>
                       <p className="mt-2 text-sm leading-7 text-muted">
-                        A proposta da Nexora é entregar uma solução que fortaleça
-                        sua marca, organize a experiência do usuário e sustente
-                        crescimento com clareza visual e consistência estrutural.
+                        A proposta da Nexora é entregar uma solução que
+                        fortaleça sua marca, organize a experiência do usuário e
+                        sustente crescimento com clareza visual e consistência
+                        estrutural.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <ContactForm email={contact.email} />
+              <ContactForm email={contact.email} />
+            </div>
           </div>
 
-          <footer className="mx-auto mt-10 max-w-7xl px-6 lg:px-8">
+          <footer className="mx-auto mt-8 max-w-7xl px-6 lg:px-8">
             <div className="flex flex-col gap-5 border-t border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex flex-col gap-2">
                 <NexoraLogo size="sm" showTagline={false} />

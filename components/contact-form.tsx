@@ -50,22 +50,22 @@ export function ContactForm({ email }: ContactFormProps) {
   };
 
   return (
-    <div className="panel-strong rounded-[2.2rem] p-7 sm:p-8">
-      <div className="mb-8">
+    <div className="panel-strong rounded-[2.2rem] p-6 sm:p-7">
+      <div className="mb-6">
         <p className="text-sm font-semibold uppercase tracking-[0.26em] text-slate-200/68">
           Formulário de contato
         </p>
-        <h3 className="mt-4 text-3xl font-semibold text-white">
+        <h3 className="mt-3 text-3xl font-semibold text-white">
           Conte um pouco sobre o seu projeto.
         </h3>
-        <p className="mt-3 max-w-xl text-base leading-7 text-muted">
+        <p className="mt-2 max-w-xl text-base leading-7 text-muted">
           Preencha os dados abaixo para abrir uma mensagem estruturada no seu
           e-mail e adiantar o briefing com a Nexora.
         </p>
       </div>
 
-      <form className="grid gap-4" onSubmit={handleSubmit}>
-        <div className="grid gap-4 sm:grid-cols-2">
+      <form className="grid gap-3" onSubmit={handleSubmit}>
+        <div className="grid gap-3 sm:grid-cols-2">
           <label className="block">
             <span className="mb-2 block text-sm font-medium text-slate-100/84">
               Nome
@@ -123,7 +123,7 @@ export function ContactForm({ email }: ContactFormProps) {
           </span>
           <textarea
             required
-            rows={6}
+            rows={5}
             value={form.message}
             onChange={(event) =>
               setForm((current) => ({
@@ -136,7 +136,7 @@ export function ContactForm({ email }: ContactFormProps) {
           />
         </label>
 
-        <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <button
             type="submit"
             className="inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand to-accent px-6 text-sm font-semibold text-white shadow-[0_18px_40px_-20px_rgba(59,130,246,0.9)] transition hover:scale-[1.01] hover:shadow-[0_24px_50px_-22px_rgba(124,58,237,0.85)]"

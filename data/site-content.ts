@@ -5,7 +5,6 @@ import {
   LayoutTemplate,
   MonitorSmartphone,
   Palette,
-  ScanSearch,
   ShieldCheck,
   Sparkles,
   Waypoints,
@@ -36,11 +35,6 @@ type Project = {
   href?: string;
 };
 
-type Stat = {
-  value: string;
-  label: string;
-};
-
 export const contact = {
   email: "contato@nexora.com.br",
   whatsappNumber: "5500000000000",
@@ -64,48 +58,6 @@ export const navigation: NavigationItem[] = [
   { label: "Projetos", href: "#projetos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Contato", href: "#contato" },
-];
-
-export const stats: Stat[] = [
-  {
-    value: "100%",
-    label: "Projetos concebidos sob medida para a realidade de cada cliente.",
-  },
-  {
-    value: "UI + UX",
-    label: "Interfaces modernas com leitura premium, fluidez e clareza.",
-  },
-  {
-    value: "Web",
-    label: "Sites, sistemas e estruturas digitais preparados para evoluir.",
-  },
-];
-
-export const aboutPillars: ItemWithIcon[] = [
-  {
-    icon: ScanSearch,
-    title: "Leitura estratégica",
-    description:
-      "Entendimento profundo do negócio, do momento da marca e da função real que o projeto precisa cumprir.",
-  },
-  {
-    icon: Palette,
-    title: "Design com posicionamento",
-    description:
-      "Construção visual refinada, coerente com o nível de mercado da empresa e com o valor que ela precisa transmitir.",
-  },
-  {
-    icon: Workflow,
-    title: "Tecnologia aplicada",
-    description:
-      "Desenvolvimento com foco em performance, usabilidade e facilidade de expansão conforme a operação cresce.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Estrutura profissional",
-    description:
-      "Cada interface é organizada para gerar confiança, facilitar decisões e sustentar uma experiência mais madura.",
-  },
 ];
 
 export const solutions: ItemWithIcon[] = [
@@ -188,41 +140,70 @@ export const differentials: ItemWithIcon[] = [
 
 export const projects: Project[] = [
   {
-    name: "Marmitas da Nida",
+    name: "Landing page para delivery",
     category: "Landing page",
-    kicker: "Cardápio e presença online",
+    kicker: "Cardápio e geração de contato",
     description:
-      "Projeto digital desenvolvido para apresentar cardápio, fortalecer presença online e facilitar o contato com clientes.",
+      "Estrutura criada para valorizar produtos, reforçar presença digital e transformar interesse em contato com mais rapidez.",
     href: "https://marmitasdanida.vercel.app/",
-    preview: ["Cardápio em destaque", "Contato simplificado", "Experiência mobile"],
+    preview: [
+      "Cardápio em destaque",
+      "Contato simplificado",
+      "Experiência mobile",
+    ],
     imageSrc: "/project-previews/marmitas-da-nida.png",
     imageAlt:
-      "Preview da landing page Marmitas da Nida com cardápio, destaques e blocos institucionais.",
+      "Preview de uma landing page para delivery com cardápio, destaques e blocos institucionais.",
     imageBadge: "Preview real",
   },
   {
-    name: "Fortlar",
-    category: "Site profissional",
-    kicker: "Serviços e credibilidade",
+    name: "Site institucional para serviços",
+    category: "Site institucional",
+    kicker: "Credibilidade e captação",
     description:
-      "Site profissional voltado para apresentação de serviços, fortalecimento da credibilidade e geração de contatos.",
+      "Modelo pensado para apresentar serviços com clareza, fortalecer a percepção de valor da marca e apoiar a entrada de novos contatos.",
     href: "https://fortlar.vercel.app/",
-    preview: ["Apresentação de serviços", "Posicionamento sólido", "Captação de leads"],
+    preview: [
+      "Apresentação de serviços",
+      "Posicionamento sólido",
+      "Captação de leads",
+    ],
     imageSrc: "/project-previews/fortlar.png",
     imageAlt:
-      "Preview do site Fortlar com hero institucional, formulário de orçamento e blocos de serviços.",
+      "Preview de um site institucional para serviços com hero comercial, formulário de orçamento e blocos de apresentação.",
     imageBadge: "Preview real",
   },
   {
-    name: "CRM",
+    name: "Vitrine digital para loja premium",
+    category: "Catálogo / Ecommerce",
+    kicker: "Produto em destaque e atendimento rápido",
+    description:
+      "Projeto voltado para valorizar produtos, acelerar o atendimento comercial e criar uma experiência mais forte para marcas de varejo premium.",
+    href: "https://ciaphone.vercel.app/",
+    preview: [
+      "Vitrine de produtos",
+      "Prova social",
+      "Contato via WhatsApp",
+    ],
+    imageSrc: "/project-previews/ciaphone.png",
+    imageAlt:
+      "Preview de uma vitrine digital para loja premium com hero de produtos, seções comerciais e destaque para conversão.",
+    imageBadge: "Preview real",
+  },
+  {
+    name: "Sistema CRM sob medida",
     category: "Sistema web",
     kicker: "Gestão operacional",
     description:
-      "Sistema desenvolvido para organizar processos, centralizar informações e melhorar a gestão operacional do negócio.",
-    preview: ["Processos centralizados", "Visão operacional", "Rotina mais inteligente"],
+      "Interface desenvolvida para organizar processos, centralizar informações e dar mais clareza à rotina operacional do negócio.",
+    preview: [
+      "Processos centralizados",
+      "Visão operacional",
+      "Rotina mais inteligente",
+    ],
     imageSrc: "/project-previews/crm-example.svg",
     imageAlt:
-      "Exemplo visual de dashboard CRM com métricas, pipeline comercial e tabela de clientes.",
+      "Exemplo visual de um sistema CRM com métricas, pipeline comercial e tabela de clientes.",
     imageBadge: "Exemplo visual",
     imageFit: "contain",
   },

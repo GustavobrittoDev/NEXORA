@@ -24,10 +24,10 @@ export function SectionHeading({
       >
         {eyebrow}
       </span>
-      <h2 className="mt-6 text-4xl font-semibold leading-tight text-white sm:text-5xl">
+      <h2 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-5xl">
         {title}
       </h2>
-      <p className="mt-5 text-lg leading-8 text-muted">{description}</p>
+      <p className="mt-4 text-lg leading-8 text-muted">{description}</p>
     </div>
   );
 }
