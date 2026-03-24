@@ -456,13 +456,13 @@ export default function Home() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="panel lift-hover block rounded-[1.9rem] px-6 py-6"
+                  className="panel lift-hover block w-full rounded-[1.9rem] px-6 py-6"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
                       <MessageCircleMore className="h-5 w-5 shrink-0" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm uppercase tracking-[0.24em] text-slate-200/62">
                         WhatsApp
                       </p>
@@ -479,13 +479,13 @@ export default function Home() {
 
                 <a
                   href={mailtoUrl}
-                  className="panel lift-hover block rounded-[1.9rem] px-6 py-6"
+                  className="panel lift-hover block w-full rounded-[1.9rem] px-6 py-6"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
                       <Mail className="h-5 w-5 shrink-0" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm uppercase tracking-[0.24em] text-slate-200/62">
                         E-mail
                       </p>
@@ -500,12 +500,12 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div className="panel-strong rounded-[1.9rem] p-6">
+                <div className="panel-strong w-full rounded-[1.9rem] p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.08] text-brand-strong">
                       <Sparkles className="h-5 w-5 shrink-0" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-lg font-semibold text-white">
                         Direção estratégica, design refinado e execução técnica
                         consistente.
