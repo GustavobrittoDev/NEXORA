@@ -38,7 +38,7 @@ export default function Home() {
           id="inicio"
           className="section-anchor pt-32 pb-22 sm:pt-36 lg:pt-40 lg:pb-28"
         >
-          <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
+          <div className="mx-auto grid max-w-7xl items-start gap-14 px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:px-8">
             <div className="relative z-10">
               <div className="chip w-fit">
                 Estratégia, design e desenvolvimento sob medida
@@ -49,7 +49,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8 space-y-6">
-                <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] text-white sm:text-6xl lg:text-[5.3rem]">
+                <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] text-white sm:text-6xl lg:text-[4.9rem]">
                   Soluções digitais sob medida para crescer com autoridade e
                   performance.
                 </h1>
