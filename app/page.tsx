@@ -459,8 +459,8 @@ export default function Home() {
                   className="panel lift-hover rounded-[1.9rem] px-6 py-6"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
-                      <MessageCircleMore className="h-5 w-5" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
+                      <MessageCircleMore className="h-5 w-5 shrink-0" />
                     </div>
                     <div>
                       <p className="text-sm uppercase tracking-[0.24em] text-slate-200/62">
@@ -482,8 +482,8 @@ export default function Home() {
                   className="panel lift-hover rounded-[1.9rem] px-6 py-6"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
-                      <Mail className="h-5 w-5" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
+                      <Mail className="h-5 w-5 shrink-0" />
                     </div>
                     <div>
                       <p className="text-sm uppercase tracking-[0.24em] text-slate-200/62">
@@ -502,8 +502,8 @@ export default function Home() {
 
                 <div className="panel-strong rounded-[1.9rem] p-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.08] text-brand-strong">
-                      <Sparkles className="h-5 w-5" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.08] text-brand-strong">
+                      <Sparkles className="h-5 w-5 shrink-0" />
                     </div>
                     <div>
                       <p className="text-lg font-semibold text-white">
