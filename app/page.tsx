@@ -38,11 +38,11 @@ export default function Home() {
       <main className="relative">
         <section
           id="inicio"
-          className="section-anchor pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-[8.75rem] lg:pb-28"
+          className="section-anchor pt-20 pb-16 sm:pt-36 sm:pb-20 lg:pt-[8.75rem] lg:pb-28"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-9 px-4 sm:gap-12 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12 lg:px-8">
-            <div className="relative z-10 fade-up">
-              <NexoraLogo size="lg" />
+            <div className="relative z-10 flex flex-col items-center text-center fade-up lg:block lg:text-left">
+              <NexoraLogo size="lg" className="items-center lg:items-start" />
 
               <div className="mt-7 max-w-3xl space-y-5 sm:mt-10 sm:space-y-6">
                 <h1 className="max-w-[13ch] text-[2.95rem] font-semibold leading-[0.92] text-white min-[390px]:text-[3.25rem] sm:max-w-none sm:text-6xl lg:text-[5rem]">
@@ -57,7 +57,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="order-3 mt-7 grid max-w-md grid-cols-2 gap-2.5 sm:mt-8 sm:flex sm:max-w-none sm:flex-wrap sm:gap-3">
+              <div className="order-3 mt-7 grid max-w-md grid-cols-2 gap-2.5 sm:mt-8 sm:flex sm:max-w-none sm:flex-wrap sm:gap-3 lg:mx-0">
                 {heroHighlights.map((item) => (
                   <span
                     key={item}
@@ -68,7 +68,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="order-2 mt-8 flex max-w-md flex-col gap-3 sm:mt-9 sm:max-w-none sm:flex-row">
+              <div className="order-2 mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-9 sm:max-w-none sm:flex-row lg:w-auto">
                 <ButtonLink
                   href={whatsappUrl}
                   icon={<MessageCircleMore className="h-4 w-4" />}
@@ -87,7 +87,7 @@ export default function Home() {
                 </ButtonLink>
               </div>
 
-              <p className="mt-5 hidden max-w-xl text-sm leading-7 text-slate-200/68 sm:block">
+              <p className="mt-5 hidden max-w-xl text-sm leading-7 text-slate-200/68 sm:block lg:mx-0">
                 Cada projeto parte do contexto da marca, não de um modelo
                 pronto. A proposta é construir presença, operação e percepção de
                 valor com o nível de acabamento que o negócio exige.
