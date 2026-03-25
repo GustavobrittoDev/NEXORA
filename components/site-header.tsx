@@ -47,7 +47,7 @@ export function SiteHeader() {
           <button
             type="button"
             className={[
-              "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70",
+              "relative z-20 -ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-white transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-strong/70",
               isScrolled ? "bg-[#07101d]/70 backdrop-blur-xl" : "bg-transparent",
             ].join(" ")}
             onClick={() => setIsOpen((current) => !current)}
@@ -55,14 +55,14 @@ export function SiteHeader() {
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
           >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isOpen ? <X className="h-[1.05rem] w-[1.05rem]" /> : <Menu className="h-[1.05rem] w-[1.05rem]" />}
           </button>
 
           <div
             id="mobile-navigation"
             aria-hidden={!isOpen}
             className={[
-              "origin-top-left pt-2 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+              "origin-top-left pt-3 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
               isOpen
                 ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
                 : "pointer-events-none -translate-y-2 scale-[0.97] opacity-0",

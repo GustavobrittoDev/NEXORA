@@ -38,13 +38,16 @@ export default function Home() {
       <main className="relative">
         <section
           id="inicio"
-          className="section-anchor pt-4 pb-16 sm:pt-36 sm:pb-20 lg:pt-[8.75rem] lg:pb-28"
+          className="section-anchor pt-2 pb-16 sm:pt-36 sm:pb-20 lg:pt-[8.75rem] lg:pb-28"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-9 px-4 sm:gap-12 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12 lg:px-8">
             <div className="relative z-10 flex flex-col items-center text-center fade-up lg:block lg:text-left">
-              <NexoraLogo size="lg" className="items-center pt-2 lg:items-start lg:pt-0" />
+              <NexoraLogo
+                size="lg"
+                className="mx-auto max-w-[16.4rem] items-center pt-0 min-[360px]:max-w-[18.2rem] min-[390px]:max-w-[20.25rem] lg:mx-0 lg:max-w-none lg:items-start"
+              />
 
-              <div className="mt-7 max-w-3xl space-y-5 sm:mt-10 sm:space-y-6">
+              <div className="mt-6 max-w-3xl space-y-5 sm:mt-10 sm:space-y-6">
                 <h1 className="max-w-[13ch] text-[2.95rem] font-semibold leading-[0.92] text-white min-[390px]:text-[3.25rem] sm:max-w-none sm:text-6xl lg:text-[5rem]">
                   Soluções digitais sob medida para crescer com autoridade.
                 </h1>
