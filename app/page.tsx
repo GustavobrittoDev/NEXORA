@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { connection } from "next/server";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -26,7 +27,21 @@ import {
   whatsappUrl,
 } from "@/data/site-content";
 
-export default function Home() {
+const fadeDelayClasses = [
+  "",
+  "fade-delay-1",
+  "fade-delay-2",
+  "fade-delay-3",
+  "fade-delay-4",
+  "fade-delay-5",
+  "fade-delay-6",
+] as const;
+
+const getFadeDelayClass = (index: number) =>
+  fadeDelayClasses[Math.min(index, fadeDelayClasses.length - 1)];
+
+export default async function Home() {
+  await connection();
   const year = new Date().getFullYear();
 
   return (
@@ -118,8 +133,12 @@ export default function Home() {
                 return (
                   <article
                     key={solution.title}
-                    className="panel lift-hover rounded-[1.7rem] p-5 fade-up sm:rounded-[2rem] sm:p-6"
-                    style={{ animationDelay: `${index * 70}ms` }}
+                    className={[
+                      "panel lift-hover rounded-[1.7rem] p-5 fade-up sm:rounded-[2rem] sm:p-6",
+                      getFadeDelayClass(index),
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong sm:h-14 sm:w-14">
@@ -156,8 +175,12 @@ export default function Home() {
               {projects.map((project, index) => (
                 <article
                   key={project.name}
-                  className="panel group lift-hover w-[85vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[1.7rem] p-3 fade-up sm:w-[22rem] sm:rounded-[2rem] sm:p-4 md:w-auto md:max-w-none md:shrink md:snap-none"
-                  style={{ animationDelay: `${index * 75}ms` }}
+                  className={[
+                    "panel group lift-hover w-[85vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[1.7rem] p-3 fade-up sm:w-[22rem] sm:rounded-[2rem] sm:p-4 md:w-auto md:max-w-none md:shrink md:snap-none",
+                    getFadeDelayClass(index),
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                 >
                   <div className="relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.96),rgba(7,13,29,0.92))] p-2 sm:rounded-[1.5rem] sm:p-2.5">
                     <div className="absolute inset-0 grid-mesh opacity-18" />
@@ -269,8 +292,12 @@ export default function Home() {
                 return (
                   <article
                     key={step.title}
-                    className="panel rounded-[1.7rem] p-5 fade-up sm:rounded-[2rem] sm:p-6"
-                    style={{ animationDelay: `${index * 80}ms` }}
+                    className={[
+                      "panel rounded-[1.7rem] p-5 fade-up sm:rounded-[2rem] sm:p-6",
+                      getFadeDelayClass(index),
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong sm:h-12 sm:w-12">
@@ -355,8 +382,12 @@ export default function Home() {
                   return (
                     <article
                       key={item.title}
-                      className="panel lift-hover rounded-[1.7rem] px-5 py-5 fade-up sm:rounded-[2rem] sm:px-6 sm:py-6"
-                      style={{ animationDelay: `${index * 80}ms` }}
+                      className={[
+                        "panel lift-hover rounded-[1.7rem] px-5 py-5 fade-up sm:rounded-[2rem] sm:px-6 sm:py-6",
+                        getFadeDelayClass(index),
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
                     >
                       <div className="flex items-start gap-4">
                         <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] text-brand-strong">
@@ -376,116 +407,6 @@ export default function Home() {
                   );
                 })}
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="hidden" aria-hidden="true">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="Projetos"
-              title="Cases e modelos que mostram como a estratégia se traduz em estrutura digital."
-              description="Projetos reais convivem com exemplos conceituais para demonstrar repertório visual, capacidade técnica e clareza de execução."
-              align="center"
-            />
-
-            <div className="project-scrollbar -mx-4 mt-10 flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:mt-12 sm:gap-4 sm:px-0 sm:pb-0 md:grid md:overflow-visible lg:grid-cols-4">
-              {projects.map((project, index) => (
-                <article
-                  key={project.name}
-                  className="panel group lift-hover w-[85vw] max-w-[22rem] shrink-0 snap-start overflow-hidden rounded-[1.7rem] p-3 fade-up sm:w-[22rem] sm:rounded-[2rem] sm:p-4 md:w-auto md:max-w-none md:shrink md:snap-none"
-                  style={{ animationDelay: `${index * 75}ms` }}
-                >
-                  <div className="relative overflow-hidden rounded-[1.3rem] border border-white/10 bg-[linear-gradient(180deg,rgba(14,24,48,0.96),rgba(7,13,29,0.92))] p-2 sm:rounded-[1.5rem] sm:p-2.5">
-                    <div className="absolute inset-0 grid-mesh opacity-18" />
-
-                    <div className="relative flex flex-wrap items-start justify-between gap-2 px-1 pb-2.5 sm:flex-nowrap sm:items-center sm:gap-3">
-                      <span
-                        className={`rounded-full border px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] ${
-                          project.kindLabel === "Projeto real"
-                            ? "border-brand-strong/24 bg-brand-strong/[0.08] text-brand-strong"
-                            : "border-white/10 bg-white/[0.05] text-slate-100/72"
-                        }`}
-                      >
-                        {project.kindLabel}
-                      </span>
-                      <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-slate-100/74">
-                        {project.category}
-                      </span>
-                    </div>
-
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-[1.15rem] border border-white/10 bg-[#08111f] sm:aspect-[16/11] sm:rounded-[1.2rem]">
-                      <Image
-                        src={project.imageSrc}
-                        alt={project.imageAlt}
-                        fill
-                        sizes="(min-width: 1024px) 22vw, (min-width: 768px) 48vw, 100vw"
-                        className={`transition duration-500 group-hover:scale-[1.02] ${
-                          project.imageFit === "contain"
-                            ? "object-contain p-3"
-                            : "object-cover object-top"
-                        }`}
-                      />
-                      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#07101b] via-[#07101b]/55 to-transparent" />
-                      <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/45 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-xl">
-                        {project.imageBadge}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-3.5 space-y-3 sm:mt-4">
-                    <div>
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-brand-strong/84 sm:text-[0.72rem] sm:tracking-[0.24em]">
-                        {project.kicker}
-                      </p>
-                      <h3 className="mt-2 text-[1.15rem] font-semibold leading-tight text-white sm:text-[1.32rem]">
-                        {project.name}
-                      </h3>
-                    </div>
-
-                    <p className="text-[0.95rem] leading-6 text-muted sm:text-sm">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {project.preview.map((item, previewIndex) => (
-                        <span
-                          key={item}
-                          className={[
-                            "rounded-full border border-white/10 bg-white/[0.05] px-2.5 py-1.5 text-[0.68rem] font-medium text-slate-100/80 sm:text-[0.72rem]",
-                            previewIndex === 2 ? "hidden sm:inline-flex" : "",
-                          ]
-                            .filter(Boolean)
-                            .join(" ")}
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-
-                    <p className="hidden border-t border-white/8 pt-3 text-[0.95rem] leading-6 text-slate-200/68 sm:block sm:text-sm">
-                      {project.outcome}
-                    </p>
-
-                    {project.href ? (
-                      <ButtonLink
-                        href={project.href}
-                        variant="ghost"
-                        external
-                        icon={<ArrowUpRight className="h-4 w-4" />}
-                        className="mt-1 justify-start"
-                      >
-                        {project.buttonLabel}
-                      </ButtonLink>
-                    ) : (
-                      <p className="text-[0.95rem] leading-6 text-slate-200/68 sm:text-sm">
-                        Exemplo conceitual para demonstrar lógica de interface,
-                        organização visual e amplitude da atuação da Nexora.
-                      </p>
-                    )}
-                  </div>
-                </article>
-              ))}
             </div>
           </div>
         </section>
@@ -552,8 +473,12 @@ export default function Home() {
                 {aboutHighlights.map((item, index) => (
                   <div
                     key={item}
-                    className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] px-4 py-4 text-center fade-up sm:rounded-[1.8rem] sm:px-5 sm:py-5"
-                    style={{ animationDelay: `${index * 80}ms` }}
+                    className={[
+                      "rounded-[1.5rem] border border-white/10 bg-white/[0.05] px-4 py-4 text-center fade-up sm:rounded-[1.8rem] sm:px-5 sm:py-5",
+                      getFadeDelayClass(index),
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
                   >
                     <p className="text-sm leading-7 text-slate-100/84">{item}</p>
                   </div>
@@ -642,7 +567,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <ContactForm email={contact.email} />
+              <ContactForm />
             </div>
           </div>
 

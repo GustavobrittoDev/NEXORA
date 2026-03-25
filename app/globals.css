@@ -263,6 +263,18 @@ select {
     animation-delay: 0.24s;
   }
 
+  .fade-delay-4 {
+    animation-delay: 0.32s;
+  }
+
+  .fade-delay-5 {
+    animation-delay: 0.4s;
+  }
+
+  .fade-delay-6 {
+    animation-delay: 0.48s;
+  }
+
   .project-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: rgba(97, 166, 255, 0.55) rgba(255, 255, 255, 0.06);

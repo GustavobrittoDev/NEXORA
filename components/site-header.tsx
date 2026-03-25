@@ -78,15 +78,12 @@ export function SiteHeader() {
             >
               <div className="px-4 py-4 sm:px-5">
                 <nav className="flex flex-col gap-2" aria-label="Menu mobile">
-                  {navigation.map((item, index) => (
+                  {navigation.map((item) => (
                     <a
                       key={item.href}
                       href={item.href}
                       className="rounded-[1.1rem] px-3.5 py-3.5 text-[0.95rem] font-medium text-slate-100/82 transition hover:bg-white/[0.06] hover:text-white"
                       onClick={() => setIsOpen(false)}
-                      style={{
-                        transitionDelay: isOpen ? `${index * 35}ms` : "0ms",
-                      }}
                     >
                       {item.label}
                     </a>

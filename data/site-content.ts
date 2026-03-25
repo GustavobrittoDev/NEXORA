@@ -13,6 +13,11 @@ import {
   Waypoints,
   Workflow,
 } from "lucide-react";
+import {
+  publicContact,
+  publicMailtoUrl,
+  publicWhatsappUrl,
+} from "@/lib/contact-config";
 
 type NavigationItem = {
   label: string;
@@ -48,22 +53,11 @@ type Project = {
   buttonLabel?: string;
 };
 
-export const contact = {
-  email: "contato@nexora.com.br",
-  whatsappNumber: "5500000000000",
-  whatsappMessage:
-    "Olá, quero conversar sobre um projeto digital com a Nexora.",
-};
+export const contact = publicContact;
 
-const normalizedWhatsapp = contact.whatsappNumber.replace(/\D/g, "");
+export const whatsappUrl = publicWhatsappUrl;
 
-export const whatsappUrl = `https://wa.me/${normalizedWhatsapp}?text=${encodeURIComponent(
-  contact.whatsappMessage,
-)}`;
-
-export const mailtoUrl = `mailto:${contact.email}?subject=${encodeURIComponent(
-  "Projeto digital com a Nexora",
-)}`;
+export const mailtoUrl = publicMailtoUrl;
 
 export const navigation: NavigationItem[] = [
   { label: "Início", href: "#inicio" },
