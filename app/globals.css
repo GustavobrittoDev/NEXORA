@@ -96,37 +96,38 @@ select {
 
 @layer components {
   .animated-background {
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 0;
     overflow: hidden;
     pointer-events: none;
+    transform: translateZ(0);
   }
 
   .animated-background__layer {
     position: absolute;
-    inset: -8%;
+    inset: -16%;
+    will-change: transform, opacity;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
   }
 
   .animated-background__layer--primary {
     background:
-      radial-gradient(42% 38% at 16% 18%, rgba(89, 145, 255, 0.16) 0%, transparent 100%),
-      radial-gradient(34% 30% at 82% 16%, rgba(132, 89, 255, 0.12) 0%, transparent 100%),
-      radial-gradient(40% 36% at 68% 72%, rgba(59, 130, 246, 0.08) 0%, transparent 100%);
-    opacity: 0.72;
+      radial-gradient(44% 40% at 16% 18%, rgba(89, 145, 255, 0.2) 0%, rgba(89, 145, 255, 0.08) 38%, transparent 78%),
+      radial-gradient(36% 32% at 82% 16%, rgba(132, 89, 255, 0.15) 0%, rgba(132, 89, 255, 0.06) 36%, transparent 74%),
+      radial-gradient(38% 34% at 68% 72%, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.03) 30%, transparent 72%);
+    opacity: 0.82;
     animation: background-drift-primary 34s cubic-bezier(0.45, 0.05, 0.55, 0.95)
       infinite alternate;
   }
 
   .animated-background__layer--secondary {
-    inset: -10%;
     background:
-      radial-gradient(36% 32% at 24% 76%, rgba(96, 165, 250, 0.07) 0%, transparent 100%),
-      radial-gradient(30% 28% at 74% 62%, rgba(124, 58, 237, 0.06) 0%, transparent 100%),
-      radial-gradient(32% 28% at 56% 28%, rgba(77, 134, 255, 0.05) 0%, transparent 100%);
-    opacity: 0.42;
+      radial-gradient(36% 34% at 24% 76%, rgba(96, 165, 250, 0.1) 0%, rgba(96, 165, 250, 0.03) 32%, transparent 74%),
+      radial-gradient(32% 30% at 74% 62%, rgba(124, 58, 237, 0.08) 0%, rgba(124, 58, 237, 0.03) 32%, transparent 74%),
+      radial-gradient(34% 30% at 56% 28%, rgba(77, 134, 255, 0.08) 0%, rgba(77, 134, 255, 0.02) 28%, transparent 72%);
+    opacity: 0.52;
     animation: background-drift-secondary 46s cubic-bezier(0.45, 0.05, 0.55, 0.95)
       infinite alternate;
   }
@@ -310,28 +311,28 @@ select {
 
 @keyframes background-drift-primary {
   0% {
-    transform: translate3d(-1.6%, -1.2%, 0) scale(1);
+    transform: translate3d(-4%, -3%, 0) scale(1.02);
   }
   50% {
-    transform: translate3d(1.1%, 0.8%, 0) scale(1.02);
+    transform: translate3d(2.5%, 1.8%, 0) scale(1.06);
   }
   100% {
-    transform: translate3d(-0.4%, 1.4%, 0) scale(1.01);
+    transform: translate3d(-1.4%, 3.8%, 0) scale(1.03);
   }
 }
 
 @keyframes background-drift-secondary {
   0% {
-    transform: translate3d(1.1%, -0.8%, 0) scale(1.03);
-    opacity: 0.36;
+    transform: translate3d(3%, -2%, 0) scale(1.06);
+    opacity: 0.42;
   }
   45% {
-    transform: translate3d(-1%, 1.2%, 0) scale(1.05);
-    opacity: 0.46;
+    transform: translate3d(-2.8%, 2.3%, 0) scale(1.1);
+    opacity: 0.58;
   }
   100% {
-    transform: translate3d(0.8%, 1%, 0) scale(1.02);
-    opacity: 0.38;
+    transform: translate3d(2.1%, 1.8%, 0) scale(1.04);
+    opacity: 0.46;
   }
 }
 
@@ -370,16 +371,17 @@ select {
 
 @media (max-width: 767px) {
   .animated-background__layer {
-    inset: -4%;
+    inset: -10%;
   }
 
   .animated-background__layer--primary {
-    opacity: 0.52;
-    animation-duration: 42s;
+    opacity: 0.66;
+    animation-duration: 38s;
   }
 
   .animated-background__layer--secondary {
-    display: none;
+    opacity: 0.28;
+    animation-duration: 54s;
   }
 
   .animated-background__veil {
