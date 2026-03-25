@@ -179,6 +179,25 @@ export const differentials: ItemWithIcon[] = [
 
 export const projects: Project[] = [
   {
+    name: "Sistema CRM sob medida",
+    category: "Sistema web",
+    kindLabel: "Exemplo visual",
+    kicker: "Pipeline, operação e gestão em uma só interface",
+    description:
+      "Exemplo visual criado para mostrar como a Nexora organiza relacionamento comercial, tarefas e indicadores em uma estrutura mais clara e madura.",
+    outcome:
+      "Posiciona a Nexora além da vitrine institucional e evidencia capacidade para desenhar sistemas sob medida com leitura premium.",
+    preview: [
+      "Pipeline visual",
+      "Gestão operacional",
+      "Visão estratégica",
+    ],
+    imageSrc: "/project-previews/crm-example.svg",
+    imageAlt:
+      "Exemplo visual de um sistema CRM com pipeline comercial, indicadores e acompanhamento operacional.",
+    imageBadge: "Exemplo visual",
+  },
+  {
     name: "Landing page para delivery",
     category: "Landing page",
     kindLabel: "Projeto real",
@@ -240,26 +259,6 @@ export const projects: Project[] = [
     imageAlt:
       "Preview de uma vitrine digital para loja premium com hero de produtos, seções comerciais e destaque para conversão.",
     imageBadge: "Projeto real",
-  },
-  {
-    name: "Sistema CRM sob medida",
-    category: "Sistema web",
-    kindLabel: "Exemplo visual",
-    kicker: "Gestão operacional com leitura clara",
-    description:
-      "Interface conceitual para demonstrar como a Nexora organiza processos, centraliza dados e traduz complexidade em operação legível.",
-    outcome:
-      "Separa o que é exemplo de sistema da vitrine de sites e mostra amplitude de execução além da presença institucional.",
-    preview: [
-      "Processos centralizados",
-      "Visão operacional",
-      "Rotina mais inteligente",
-    ],
-    imageSrc: "/project-previews/crm-example.svg",
-    imageAlt:
-      "Exemplo visual de um sistema CRM com métricas, pipeline comercial e tabela de clientes.",
-    imageBadge: "Exemplo visual",
-    imageFit: "contain",
   },
 ];
 
