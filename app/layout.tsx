@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
+import { AnimatedBackground } from "@/components/animated-background";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -62,7 +63,8 @@ export default function RootLayout({
       className={`${manrope.variable} ${sora.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-background text-foreground">
-        {children}
+        <AnimatedBackground />
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
